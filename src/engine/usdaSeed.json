@@ -1,0 +1,325 @@
+{
+  "rice_cooked": {
+    "query": "Rice, white, long-grain, regular, cooked, without salt",
+    "fdcId": 169757,
+    "description": "Rice, white, long-grain, regular, unenriched, cooked without salt",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 130,
+      "protein": 2.7,
+      "carbs": 28.2,
+      "fat": 0.3,
+      "sodium": 1.0,
+      "sugar": 0.1,
+      "fiber": 0.4
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169757/nutrients"
+  },
+  "chicken_fried": {
+    "query": "Chicken, broilers or fryers, breast, meat and skin, cooked, fried",
+    "fdcId": 171475,
+    "description": "Chicken, broilers or fryers, breast, meat and skin, cooked, fried, batter",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 260,
+      "protein": 24.8,
+      "carbs": 9.0,
+      "fat": 13.2,
+      "sodium": 275,
+      "sugar": 0.0,
+      "fiber": 0.3
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/171475/nutrients"
+  },
+  "sriracha": {
+    "query": "Sauce, hot chile, sriracha",
+    "fdcId": 171186,
+    "description": "Sauce, hot chile, sriracha",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 93.0,
+      "protein": 1.9,
+      "carbs": 19.2,
+      "fat": 0.9,
+      "sodium": 2120.0,
+      "sugar": 15.1,
+      "fiber": 2.2
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/171186/nutrients"
+  },
+  "anchovies": {
+    "query": "Fish, anchovy, european, canned in oil, drained solids",
+    "fdcId": 174183,
+    "description": "Fish, anchovy, european, canned in oil, drained solids",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 210,
+      "protein": 28.9,
+      "carbs": 0.0,
+      "fat": 9.7,
+      "sodium": 3670.0,
+      "sugar": 0.0,
+      "fiber": 0.0
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/174183/nutrients"
+  },
+  "peanuts": {
+    "query": "Peanuts, all types, dry-roasted, without salt",
+    "fdcId": 173806,
+    "description": "Peanuts, all types, dry-roasted, without salt",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 587,
+      "protein": 24.4,
+      "carbs": 21.3,
+      "fat": 49.7,
+      "sodium": 6.0,
+      "sugar": 4.9,
+      "fiber": 8.4
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/173806/nutrients"
+  },
+  "egg_boiled": {
+    "query": "Egg, whole, cooked, hard-boiled",
+    "fdcId": 173424,
+    "description": "Egg, whole, cooked, hard-boiled",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 155,
+      "protein": 12.6,
+      "carbs": 1.1,
+      "fat": 10.6,
+      "sodium": 124,
+      "sugar": 1.1,
+      "fiber": 0.0
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/173424/nutrients"
+  },
+  "cucumber": {
+    "query": "Cucumber, with peel, raw",
+    "fdcId": 2346406,
+    "description": "Cucumber, with peel, raw",
+    "dataType": "Foundation",
+    "per100g": {
+      "kcal": 15.9,
+      "protein": 0.6,
+      "carbs": 3.0,
+      "fat": 0.2,
+      "sodium": 1.5,
+      "sugar": 0.0,
+      "fiber": 0.0
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2346406/nutrients"
+  },
+  "rice_noodles": {
+    "query": "Rice noodles, cooked",
+    "fdcId": 168914,
+    "description": "Rice noodles, cooked",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 108,
+      "protein": 1.8,
+      "carbs": 24.0,
+      "fat": 0.2,
+      "sodium": 19.0,
+      "sugar": 0.0,
+      "fiber": 1.0
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/168914/nutrients"
+  },
+  "beef_cooked": {
+    "query": "Beef, brisket, flat half, separable lean only, cooked, braised",
+    "fdcId": 170601,
+    "description": "Beef, brisket, flat half, separable lean only, trimmed to 0\" fat, choice, cooked, braised",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 212,
+      "protein": 32.6,
+      "carbs": 0.0,
+      "fat": 8.1,
+      "sodium": 52.0,
+      "sugar": 0.0,
+      "fiber": 0.0
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/170601/nutrients"
+  },
+  "beef_broth": {
+    "query": "Soup, beef broth or bouillon, canned, ready-to-serve",
+    "fdcId": 171538,
+    "description": "Soup, beef broth or bouillon canned, ready-to-serve",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 7.0,
+      "protein": 1.1,
+      "carbs": 0.0,
+      "fat": 0.2,
+      "sodium": 372,
+      "sugar": 0.0,
+      "fiber": 0.0
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/171538/nutrients"
+  },
+  "tofu": {
+    "query": "Tofu, firm, prepared with calcium sulfate and magnesium chloride",
+    "fdcId": 172448,
+    "description": "Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 78.0,
+      "protein": 9.0,
+      "carbs": 2.9,
+      "fat": 4.2,
+      "sodium": 12.0,
+      "sugar": 0.6,
+      "fiber": 0.9
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/172448/nutrients"
+  },
+  "bean_sprouts": {
+    "query": "Mung beans, mature seeds, sprouted, raw",
+    "fdcId": 169957,
+    "description": "Mung beans, mature seeds, sprouted, raw",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 30.0,
+      "protein": 3.0,
+      "carbs": 5.9,
+      "fat": 0.2,
+      "sodium": 6.0,
+      "sugar": 4.1,
+      "fiber": 1.8
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169957/nutrients"
+  },
+  "palm_oil": {
+    "query": "Oil, palm",
+    "fdcId": 171015,
+    "description": "Oil, palm",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 884,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 100,
+      "sodium": 0.0,
+      "sugar": 0.0,
+      "fiber": 0.0
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/171015/nutrients"
+  },
+  "soy_sauce": {
+    "query": "Soy sauce made from soy and wheat (shoyu)",
+    "fdcId": 174277,
+    "description": "Soy sauce made from soy and wheat (shoyu)",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 53.0,
+      "protein": 8.1,
+      "carbs": 4.9,
+      "fat": 0.6,
+      "sodium": 5490.0,
+      "sugar": 0.4,
+      "fiber": 0.8
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/174277/nutrients"
+  },
+  "oyster_mushroom": {
+    "query": "Mushrooms, oyster, raw",
+    "fdcId": 168580,
+    "description": "Mushrooms, oyster, raw",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 33.0,
+      "protein": 3.3,
+      "carbs": 6.1,
+      "fat": 0.4,
+      "sodium": 18.0,
+      "sugar": 1.1,
+      "fiber": 2.3
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/168580/nutrients"
+  },
+  "coconut_milk": {
+    "query": "Nuts, coconut milk, canned",
+    "fdcId": 170173,
+    "description": "Nuts, coconut milk, canned (liquid expressed from grated meat and water)",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 197,
+      "protein": 2.0,
+      "carbs": 2.8,
+      "fat": 21.3,
+      "sodium": 13.0,
+      "sugar": 0.0,
+      "fiber": 0.0
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/170173/nutrients"
+  },
+  "shrimp": {
+    "query": "Crustaceans, shrimp, mixed species, cooked, moist heat",
+    "fdcId": 171971,
+    "description": "Crustaceans, shrimp, mixed species, cooked, moist heat (may contain additives to retain moisture)",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 119,
+      "protein": 22.8,
+      "carbs": 1.5,
+      "fat": 1.7,
+      "sodium": 947,
+      "sugar": 0.0,
+      "fiber": 0.0
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/171971/nutrients"
+  },
+  "spinach_cooked": {
+    "query": "Spinach, cooked, boiled, drained, without salt",
+    "fdcId": 168463,
+    "description": "Spinach, cooked, boiled, drained, without salt",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 23.0,
+      "protein": 3.0,
+      "carbs": 3.8,
+      "fat": 0.3,
+      "sodium": 70.0,
+      "sugar": 0.4,
+      "fiber": 2.4
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/168463/nutrients"
+  },
+  "chicken_cooked": {
+    "query": "Chicken, broilers or fryers, dark meat, meat only, cooked, stewed",
+    "fdcId": 171070,
+    "description": "Chicken, broilers or fryers, dark meat, meat only, cooked, stewed",
+    "dataType": "SR Legacy",
+    "per100g": {
+      "kcal": 192,
+      "protein": 26.0,
+      "carbs": 0.0,
+      "fat": 9.0,
+      "sodium": 74.0,
+      "sugar": 0.0,
+      "fiber": 0.0
+    },
+    "source": "USDA FoodData Central",
+    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/171070/nutrients"
+  }
+}

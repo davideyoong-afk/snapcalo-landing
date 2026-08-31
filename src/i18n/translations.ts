@@ -1,0 +1,518 @@
+export type Language = 'en' | 'ms' | 'id' | 'vi' | 'th' | 'zh'
+
+export const languages: { code: Language; label: string; flag: string }[] = [
+  { code: 'en', label: 'English', flag: '🇬🇧' },
+  { code: 'ms', label: 'Bahasa Malaysia', flag: '🇲🇾' },
+  { code: 'id', label: 'Bahasa Indonesia', flag: '🇮🇩' },
+  { code: 'vi', label: 'Tiếng Việt', flag: '🇻🇳' },
+  { code: 'th', label: 'ภาษาไทย', flag: '🇹🇭' },
+  { code: 'zh', label: '中文', flag: '🇨🇳' },
+]
+
+export const translations: Record<Language, {
+  nav: { features: string; howItWorks: string; accuracy: string; foods: string; tryFree: string }
+  hero: { badge: string; title1: string; title2: string; desc: string; ctaPrimary: string; ctaSecondary: string; trust1: string; trust2: string; users: string }
+  socialProof: { dishes: string; users: string; speed: string; accuracy: string }
+  features: { title: string; subtitle: string; items: { title: string; desc: string }[] }
+  howItWorks: { title: string; subtitle: string; steps: { num: string; title: string; desc: string }[] }
+  accuracy: { title: string; subtitle: string; items: { title: string; desc: string }[]; note: string }
+  foods: { title: string; subtitle: string }
+  testimonials: { title: string; items: { quote: string; name: string; location: string }[] }
+  faq: { title: string; items: { q: string; a: string }[] }
+  download: { title: string; subtitle: string; scan: string; appStore: string; googlePlay: string; tag1: string; tag2: string; tag3: string }
+  pricing: { title: string; subtitle: string; free: { name: string; desc: string; price: string; period: string; features: string[]; cta: string }; pro: { name: string; desc: string; price: string; period: string; badge: string; features: string[]; cta: string } }
+  cta: { title: string; subtitle: string; ctaPrimary: string; ctaSecondary: string }
+  footer: { tagline: string; product: string; company: string; legal: string; copyright: string }
+}> = {
+  en: {
+    nav: { features: 'Features', howItWorks: 'How It Works', accuracy: 'Accuracy', foods: 'Foods', tryFree: 'Try For Free' },
+    hero: {
+      badge: 'AI-Powered for Southeast Asia',
+      title1: 'Snap Your Meal.',
+      title2: 'Know Your Calories.',
+      desc: 'No more manual logging. Just snap a photo of Nasi Lemak, Pho, Pad Thai — or any dish — and get instant calories & macros.',
+      ctaPrimary: 'Try For Free',
+      ctaSecondary: 'See How It Works',
+      trust1: 'No credit card',
+      trust2: 'Cancel anytime',
+      users: 'Southeast Asians tracking smarter',
+    },
+    socialProof: { dishes: 'Local dishes tracked', users: 'Active users', speed: 'AI analysis time', accuracy: 'Recognition accuracy' },
+    features: {
+      title: 'Why SnapCalo?',
+      subtitle: 'Built specifically for Southeast Asian diets. No more guessing calories for local dishes.',
+      items: [
+        { title: 'Snap & Track', desc: 'Take a photo of any meal. Our AI identifies the dish and calculates calories in under 2 seconds. No typing, no searching.' },
+        { title: 'Local Food Database', desc: 'Trained on 10,000+ Southeast Asian dishes. From Nasi Goreng to Bun Cha, we know your favorites.' },
+        { title: 'Smart Goals', desc: 'Set daily calorie targets. Get personalized recommendations based on your activity level, age, and weight goals.' },
+        { title: 'AI Learning', desc: 'The more you use it, the smarter it gets. Learns your eating patterns, portion sizes, and local restaurants.' },
+      ],
+    },
+    howItWorks: {
+      title: 'How The Photo Calorie Counter Works',
+      subtitle: 'Three simple steps. No manual entry needed. Just snap and know.',
+      steps: [
+        { num: '01', title: 'Dish Recognition from Photo', desc: 'SnapCalo uses advanced computer vision to analyze your meal photo. It identifies ingredients, cooking methods, and recognizes mixed dishes.' },
+        { num: '02', title: 'Estimate Calories & Macros', desc: 'After identifying the dish, our AI estimates portion size using visual analysis. It calculates calories, protein, fat, and carbs.' },
+        { num: '03', title: 'Track & Improve', desc: 'View your daily progress, get personalized tips, and build healthy habits. The AI learns your patterns and gets more accurate.' },
+      ],
+    },
+    accuracy: {
+      title: 'How Accurate Is It?',
+      subtitle: 'We know you care about precision. Here is how SnapCalo ensures reliable calorie estimates.',
+      items: [
+        { title: 'Visual Analysis', desc: 'Our AI analyzes food proportions, textures, and cooking methods — not just matching photos to a database.' },
+        { title: 'Portion Estimation', desc: 'Uses reference objects in the photo to estimate realistic portion sizes.' },
+        { title: 'Learns Over Time', desc: 'The more you snap, the better it understands your typical portions and local variations.' },
+      ],
+      note: 'Based on our testing, SnapCalo achieves ~95% accuracy for common Southeast Asian dishes. You can always adjust portion sizes manually.',
+    },
+    foods: { title: 'Know Your Local Favorites', subtitle: 'SnapCalo recognizes thousands of Southeast Asian dishes. Here are just a few.' },
+    testimonials: {
+      title: 'Loved Across Southeast Asia',
+      items: [
+        { quote: "Finally an app that knows Nasi Lemak isn't just 'rice'! The calorie count is surprisingly accurate.", name: 'Aisyah', location: 'Kuala Lumpur, Malaysia' },
+        { quote: "I use it every day for my Pho and Bun Cha. Way better than generic calorie apps.", name: 'Minh', location: 'Ho Chi Minh City, Vietnam' },
+        { quote: 'The AI recognized my Pad Thai even with extra peanuts. Lost 4kg in 2 months.', name: 'Pim', location: 'Bangkok, Thailand' },
+      ],
+    },
+    faq: {
+      title: 'Frequently Asked Questions',
+      items: [
+        { q: 'Is SnapCalo free to use?', a: 'Yes! You can snap up to 5 meals per day for free. Upgrade to Pro for unlimited snaps and detailed macro tracking.' },
+        { q: 'How accurate is the calorie estimation?', a: 'Our AI achieves approximately 95% accuracy for common Southeast Asian dishes. You can always adjust portion sizes manually.' },
+        { q: 'Does it work for all types of food?', a: 'SnapCalo is specially trained on Southeast Asian cuisine. It also works well for Western, Japanese, Korean, and Chinese food.' },
+        { q: 'Do I need to manually enter ingredients?', a: 'No! Just snap a photo and the AI does the rest. No typing, no searching.' },
+        { q: 'Is my data private?', a: 'Absolutely. Your meal photos and health data are encrypted and never shared with third parties.' },
+      ],
+    },
+    download: {
+      title: 'Download SnapCalo Today',
+      subtitle: 'Scan the QR code with your phone camera to download the app. Available on iOS and Android.',
+      scan: 'Scan to Download',
+      appStore: 'App Store',
+      googlePlay: 'Google Play',
+      tag1: 'Free to download',
+      tag2: 'No credit card required',
+      tag3: 'Cancel anytime',
+    },
+    pricing: {
+      title: 'Simple Pricing',
+      subtitle: 'Start free. Upgrade when you are ready.',
+      free: { name: 'Free', desc: 'Perfect for getting started', price: '$0', period: '/month', features: ['5 snaps per day', 'Basic calorie tracking', 'Weekly reports', 'Ad-supported'], cta: 'Get Started' },
+      pro: { name: 'Pro', desc: 'For serious trackers', price: '$4.99', period: '/month', badge: 'MOST POPULAR', features: ['Unlimited snaps', 'AI meal recommendations', 'Macro tracking', 'Personalized diet plans', 'No ads', 'Export data'], cta: 'Upgrade to Pro' },
+    },
+    cta: { title: 'Ready to Snap Your First Meal?', subtitle: 'Join 2,400+ Southeast Asians who are already tracking smarter with SnapCalo.', ctaPrimary: 'Try For Free', ctaSecondary: 'Learn More' },
+    footer: { tagline: 'AI calorie tracking for Southeast Asian food.', product: 'Product', company: 'Company', legal: 'Legal', copyright: '2026 SnapCalo.ai. Made with love for Southeast Asia.' },
+  },
+
+  ms: {
+    nav: { features: 'Ciri', howItWorks: 'Cara Kerja', accuracy: 'Ketepatan', foods: 'Makanan', tryFree: 'Cuba Percuma' },
+    hero: {
+      badge: 'Dikuasakan AI untuk Asia Tenggara',
+      title1: 'Snap Makanan Anda.',
+      title2: 'Ketahui Kalori.',
+      desc: 'Tidak perlu log manual. Ambil gambar Nasi Lemak, Pho, Pad Thai — atau apa sahaja hidangan — dan dapatkan kalori & makro segera.',
+      ctaPrimary: 'Cuba Percuma',
+      ctaSecondary: 'Lihat Cara Kerja',
+      trust1: 'Tiada kad kredit',
+      trust2: 'Batal bila-bila masa',
+      users: 'rakyat Asia Tenggara menjejak dengan bijak',
+    },
+    socialProof: { dishes: 'Hidangan tempatan dijejak', users: 'Pengguna aktif', speed: 'Masa analisis AI', accuracy: 'Ketepatan pengenalan' },
+    features: {
+      title: 'Kenapa SnapCalo?',
+      subtitle: 'Dibina khas untuk diet Asia Tenggara. Tidak perlu meneka kalori untuk hidangan tempatan.',
+      items: [
+        { title: 'Snap & Jejak', desc: 'Ambil gambar sebarang hidangan. AI kami mengenal pasti hidangan dan mengira kalori dalam masa 2 saat.' },
+        { title: 'Pangkalan Data Makanan Tempatan', desc: 'Dilatih dengan 10,000+ hidangan Asia Tenggara. Dari Nasi Goreng ke Bun Cha, kami kenal kegemaran anda.' },
+        { title: 'Sasaran Pintar', desc: 'Tetapkan sasaran kalori harian. Dapatkan cadangan peribadi berdasarkan tahap aktiviti, umur, dan matlamat berat.' },
+        { title: 'AI Belajar', desc: 'Lebih kerap anda menggunakannya, lebih pintar ia menjadi. Belajar corak makan, saiz hidangan, dan restoran tempatan anda.' },
+      ],
+    },
+    howItWorks: {
+      title: 'Cara Penjejak Kalori Gambar Berfungsi',
+      subtitle: 'Tiga langkah mudah. Tiada kemasukan manual diperlukan. Snap dan tahu.',
+      steps: [
+        { num: '01', title: 'Pengenalan Hidangan dari Gambar', desc: 'SnapCalo menggunakan visi komputer termaju untuk menganalisis gambar makanan anda. Ia mengenal pasti bahan, kaedah memasak, dan mengenal pasti hidangan campuran.' },
+        { num: '02', title: 'Anggar Kalori & Makro', desc: 'Selepas mengenal pasti hidangan, AI kami menganggar saiz hidangan menggunakan analisis visual. Ia mengira kalori, protein, lemak, dan karbohidrat.' },
+        { num: '03', title: 'Jejak & Tambah Baik', desc: 'Lihat kemajuan harian anda, dapatkan tip peribadi, dan bina tabiat sihat. AI belajar corak anda dan menjadi lebih tepat.' },
+      ],
+    },
+    accuracy: {
+      title: 'Berapa Tepatkah Ia?',
+      subtitle: 'Kami tahu anda mengambil berat tentang ketepatan. Berikut adalah cara SnapCalo memastikan anggaran kalori yang boleh dipercayai.',
+      items: [
+        { title: 'Analisis Visual', desc: 'AI kami menganalisis nisbah makanan, tekstur, dan kaedah memasak — bukan sekadar menanding gambar dengan pangkalan data.' },
+        { title: 'Anggaran Hidangan', desc: 'Menggunakan objek rujukan dalam gambar untuk menganggar saiz hidangan yang realistik.' },
+        { title: 'Belajar dari Masa ke Masa', desc: 'Lebih kerap anda snap, lebih baik ia memahami hidangan biasa dan variasi tempatan anda.' },
+      ],
+      note: 'Berdasarkan ujian kami, SnapCalo mencapai ketepatan ~95% untuk hidangan Asia Tenggara biasa. Anda sentiasa boleh laraskan saiz hidangan secara manual.',
+    },
+    foods: { title: 'Ketahui Kegemaran Tempatan Anda', subtitle: 'SnapCalo mengenal pasti beribu-ribu hidangan Asia Tenggara. Berikut adalah beberapa contoh.' },
+    testimonials: {
+      title: 'Disayangi di Seluruh Asia Tenggara',
+      items: [
+        { quote: 'Akhirnya ada aplikasi yang tahu Nasi Lemak bukan sekadar nasi! Kiraan kalorinya sangat tepat.', name: 'Aisyah', location: 'Kuala Lumpur, Malaysia' },
+        { quote: 'Saya guna setiap hari untuk Pho dan Bun Cha. Jauh lebih baik daripada aplikasi kalori biasa.', name: 'Minh', location: 'Ho Chi Minh City, Vietnam' },
+        { quote: 'AI mengenal pasti Pad Thai saya walaupun dengan kacang tambahan. Turun 4kg dalam 2 bulan.', name: 'Pim', location: 'Bangkok, Thailand' },
+      ],
+    },
+    faq: {
+      title: 'Soalan Lazim',
+      items: [
+        { q: 'Adakah SnapCalo percuma?', a: 'Ya! Anda boleh snap sehingga 5 hidangan sehari secara percuma. Naik taraf ke Pro untuk snap tanpa had dan jejak makro terperinci.' },
+        { q: 'Berapa tepat anggaran kalori?', a: 'AI kami mencapai ketepatan kira-kira 95% untuk hidangan Asia Tenggara biasa. Anda sentiasa boleh laraskan saiz hidangan secara manual.' },
+        { q: 'Adakah ia berfungsi untuk semua jenis makanan?', a: 'SnapCalo dilatih khas untuk masakan Asia Tenggara. Ia juga berfungsi dengan baik untuk makanan Barat, Jepun, Korea, dan Cina.' },
+        { q: 'Perlukah saya masukkan bahan secara manual?', a: 'Tidak! Hanya snap gambar dan AI akan melakukan yang lain. Tiada menaip, tiada mencari.' },
+        { q: 'Adakah data saya peribadi?', a: 'Sudah tentu. Gambar makanan dan data kesihatan anda disulitkan dan tidak dikongsi dengan pihak ketiga.' },
+      ],
+    },
+    download: {
+      title: 'Muat Turun SnapCalo Hari Ini',
+      subtitle: 'Imbas kod QR dengan kamera telefon anda untuk memuat turun aplikasi. Tersedia di iOS dan Android.',
+      scan: 'Imbas untuk Muat Turun',
+      appStore: 'App Store',
+      googlePlay: 'Google Play',
+      tag1: 'Percuma dimuat turun',
+      tag2: 'Tiada kad kredit diperlukan',
+      tag3: 'Batal bila-bila masa',
+    },
+    pricing: {
+      title: 'Harga Mudah',
+      subtitle: 'Mula percuma. Naik taraf apabila anda sedia.',
+      free: { name: 'Percuma', desc: 'Sempurna untuk permulaan', price: '$0', period: '/bulan', features: ['5 snap sehari', 'Jejak kalori asas', 'Laporan mingguan', 'Disokong iklan'], cta: 'Mula' },
+      pro: { name: 'Pro', desc: 'Untuk penjejak serius', price: '$4.99', period: '/bulan', badge: 'PALING POPULAR', features: ['Snap tanpa had', 'Cadangan makanan AI', 'Jejak makro', 'Pelan diet peribadi', 'Tiada iklan', 'Eksport data'], cta: 'Naik Taraf ke Pro' },
+    },
+    cta: { title: 'Sedia untuk Snap Makanan Pertama Anda?', subtitle: 'Sertai 2,400+ rakyat Asia Tenggara yang sudah menjejak dengan bijak menggunakan SnapCalo.', ctaPrimary: 'Cuba Percuma', ctaSecondary: 'Ketahui Lebih Lanjut' },
+    footer: { tagline: 'Penjejak kalori AI untuk makanan Asia Tenggara.', product: 'Produk', company: 'Syarikat', legal: 'Undang-undang', copyright: '2026 SnapCalo.ai. Dibuat dengan kasih sayang untuk Asia Tenggara.' },
+  },
+
+  id: {
+    nav: { features: 'Fitur', howItWorks: 'Cara Kerja', accuracy: 'Akurasi', foods: 'Makanan', tryFree: 'Coba Gratis' },
+    hero: {
+      badge: 'Didukung AI untuk Asia Tenggara',
+      title1: 'Foto Makananmu.',
+      title2: 'Ketahui Kalorinya.',
+      desc: 'Tidak perlu mencatat manual. Cukup foto Nasi Lemak, Pho, Pad Thai — atau hidangan apa saja — dan dapatkan kalori & makro langsung.',
+      ctaPrimary: 'Coba Gratis',
+      ctaSecondary: 'Lihat Cara Kerja',
+      trust1: 'Tanpa kartu kredit',
+      trust2: 'Batalkan kapan saja',
+      users: 'orang Asia Tenggara melacak dengan cerdas',
+    },
+    socialProof: { dishes: 'Hidangan lokal dilacak', users: 'Pengguna aktif', speed: 'Waktu analisis AI', accuracy: 'Akurasi pengenalan' },
+    features: {
+      title: 'Mengapa SnapCalo?',
+      subtitle: 'Dibangun khusus untuk diet Asia Tenggara. Tidak perlu menebak kalori untuk hidangan lokal.',
+      items: [
+        { title: 'Foto & Lacak', desc: 'Ambil foto hidangan apa saja. AI kami mengidentifikasi hidangan dan menghitung kalori dalam waktu 2 detik.' },
+        { title: 'Database Makanan Lokal', desc: 'Dilatih dengan 10,000+ hidangan Asia Tenggara. Dari Nasi Goreng hingga Bun Cha, kami kenal favoritmu.' },
+        { title: 'Target Pintar', desc: 'Tetapkan target kalori harian. Dapatkan rekomendasi pribadi berdasarkan tingkat aktivitas, usia, dan tujuan berat badan.' },
+        { title: 'AI Belajar', desc: 'Semakin sering kamu menggunakannya, semakin pintar. Belajar pola makan, ukuran porsi, dan restoran lokalmu.' },
+      ],
+    },
+    howItWorks: {
+      title: 'Cara Penghitung Kalori Foto Bekerja',
+      subtitle: 'Tiga langkah sederhana. Tidak perlu entri manual. Foto dan ketahui.',
+      steps: [
+        { num: '01', title: 'Pengenalan Hidangan dari Foto', desc: 'SnapCalo menggunakan visi komputer canggih untuk menganalisis foto makananmu. Mengidentifikasi bahan, metode memasak, dan mengenali hidangan campuran.' },
+        { num: '02', title: 'Perkiraan Kalori & Makro', desc: 'Setelah mengidentifikasi hidangan, AI kami memperkirakan ukuran porsi menggunakan analisis visual. Menghitung kalori, protein, lemak, dan karbohidrat.' },
+        { num: '03', title: 'Lacak & Perbaiki', desc: 'Lihat kemajuan harianmu, dapatkan tip pribadi, dan bangun kebiasaan sehat. AI belajar polamu dan semakin akurat.' },
+      ],
+    },
+    accuracy: {
+      title: 'Seberapa Akurat?',
+      subtitle: 'Kami tahu kamu peduli dengan ketepatan. Berikut cara SnapCalo memastikan perkiraan kalori yang andal.',
+      items: [
+        { title: 'Analisis Visual', desc: 'AI kami menganalisis proporsi makanan, tekstur, dan metode memasak — bukan hanya mencocokkan foto dengan database.' },
+        { title: 'Perkiraan Porsi', desc: 'Menggunakan objek referensi dalam foto untuk memperkirakan ukuran porsi yang realistis.' },
+        { title: 'Belajar Seiring Waktu', desc: 'Semakin sering kamu foto, semakin baik memahami porsi khas dan variasi lokalmu.' },
+      ],
+      note: 'Berdasarkan pengujian kami, SnapCalo mencapai akurasi ~95% untuk hidangan Asia Tenggara umum. Kamu selalu bisa menyesuaikan ukuran porsi secara manual.',
+    },
+    foods: { title: 'Ketahui Favorit Lokalmu', subtitle: 'SnapCalo mengenali ribuan hidangan Asia Tenggara. Berikut beberapa contohnya.' },
+    testimonials: {
+      title: 'Dicintai di Seluruh Asia Tenggara',
+      items: [
+        { quote: 'Akhirnya ada aplikasi yang tahu Nasi Lemak bukan sekadar nasi! Perhitungan kalorinya sangat akurat.', name: 'Aisyah', location: 'Kuala Lumpur, Malaysia' },
+        { quote: 'Saya pakai setiap hari untuk Pho dan Bun Cha. Jauh lebih baik dari aplikasi kalori biasa.', name: 'Minh', location: 'Ho Chi Minh City, Vietnam' },
+        { quote: 'AI mengenali Pad Thai saya meski dengan kacang tambahan. Turun 4kg dalam 2 bulan.', name: 'Pim', location: 'Bangkok, Thailand' },
+      ],
+    },
+    faq: {
+      title: 'Pertanyaan yang Sering Diajukan',
+      items: [
+        { q: 'Apakah SnapCalo gratis?', a: 'Ya! Kamu bisa foto hingga 5 hidangan per hari secara gratis. Upgrade ke Pro untuk foto tanpa batas dan pelacakan makro detail.' },
+        { q: 'Seberapa akurat perkiraan kalori?', a: 'AI kami mencapai akurasi sekitar 95% untuk hidangan Asia Tenggara umum. Kamu selalu bisa menyesuaikan ukuran porsi secara manual.' },
+        { q: 'Apakah berfungsi untuk semua jenis makanan?', a: 'SnapCalo dilatih khusus untuk masakan Asia Tenggara. Juga berfungsi baik untuk makanan Barat, Jepang, Korea, dan Cina.' },
+        { q: 'Apakah saya perlu memasukkan bahan secara manual?', a: 'Tidak! Cukup foto dan AI akan melakukan sisanya. Tidak perlu mengetik, tidak perlu mencari.' },
+        { q: 'Apakah data saya pribadi?', a: 'Tentu saja. Foto makanan dan data kesehatanmu dienkripsi dan tidak dibagikan ke pihak ketiga.' },
+      ],
+    },
+    download: {
+      title: 'Unduh SnapCalo Hari Ini',
+      subtitle: 'Pindai kode QR dengan kamera ponselmu untuk mengunduh aplikasi. Tersedia di iOS dan Android.',
+      scan: 'Pindai untuk Unduh',
+      appStore: 'App Store',
+      googlePlay: 'Google Play',
+      tag1: 'Gratis diunduh',
+      tag2: 'Tanpa kartu kredit',
+      tag3: 'Batalkan kapan saja',
+    },
+    pricing: {
+      title: 'Harga Sederhana',
+      subtitle: 'Mulai gratis. Upgrade saat kamu siap.',
+      free: { name: 'Gratis', desc: 'Sempurna untuk memulai', price: '$0', period: '/bulan', features: ['5 foto per hari', 'Pelacakan kalori dasar', 'Laporan mingguan', 'Dengan iklan'], cta: 'Mulai' },
+      pro: { name: 'Pro', desc: 'Untuk pelacak serius', price: '$4.99', period: '/bulan', badge: 'PALING POPULER', features: ['Foto tanpa batas', 'Rekomendasi makanan AI', 'Pelacakan makro', 'Rencana diet pribadi', 'Tanpa iklan', 'Ekspor data'], cta: 'Upgrade ke Pro' },
+    },
+    cta: { title: 'Siap Foto Makanan Pertamamu?', subtitle: 'Bergabung dengan 2,400+ orang Asia Tenggara yang sudah melacak dengan cerdas menggunakan SnapCalo.', ctaPrimary: 'Coba Gratis', ctaSecondary: 'Pelajari Lebih Lanjut' },
+    footer: { tagline: 'Pelacak kalori AI untuk makanan Asia Tenggara.', product: 'Produk', company: 'Perusahaan', legal: 'Hukum', copyright: '2026 SnapCalo.ai. Dibuat dengan cinta untuk Asia Tenggara.' },
+  },
+
+  vi: {
+    nav: { features: 'Tính năng', howItWorks: 'Cách hoạt động', accuracy: 'Độ chính xác', foods: 'Món ăn', tryFree: 'Dùng thử miễn phí' },
+    hero: {
+      badge: 'AI dành cho Đông Nam Á',
+      title1: 'Chụp món ăn.',
+      title2: 'Biết ngay calo.',
+      desc: 'Không cần ghi chép thủ công. Chỉ cần chụp ảnh Nasi Lemak, Phở, Pad Thai — hoặc bất kỳ món nào — và nhận ngay calo & dinh dưỡng.',
+      ctaPrimary: 'Dùng thử miễn phí',
+      ctaSecondary: 'Xem cách hoạt động',
+      trust1: 'Không cần thẻ tín dụng',
+      trust2: 'Hủy bất cứ lúc nào',
+      users: 'người Đông Nam Á đang theo dõi thông minh hơn',
+    },
+    socialProof: { dishes: 'Món ăn địa phương', users: 'Người dùng', speed: 'Thời gian phân tích AI', accuracy: 'Độ chính xác' },
+    features: {
+      title: 'Tại sao chọn SnapCalo?',
+      subtitle: 'Được xây dựng dành riêng cho chế độ ăn Đông Nam Á. Không còn đoán calo cho món ăn địa phương.',
+      items: [
+        { title: 'Chụp & Theo dõi', desc: 'Chụp ảnh bất kỳ món ăn nào. AI của chúng tôi nhận diện món ăn và tính calo trong vòng 2 giây.' },
+        { title: 'Cơ sở dữ liệu món ăn địa phương', desc: 'Được đào tạo với 10,000+ món ăn Đông Nam Á. Từ Nasi Goreng đến Bún Chả, chúng tôi biết món yêu thích của bạn.' },
+        { title: 'Mục tiêu thông minh', desc: 'Đặt mục tiêu calo hàng ngày. Nhận gợi ý cá nhân dựa trên mức độ hoạt động, tuổi và mục tiêu cân nặng.' },
+        { title: 'AI học hỏi', desc: 'Càng dùng càng thông minh. Học thói quen ăn uống, khẩu phần và cả nhà hàng địa phương của bạn.' },
+      ],
+    },
+    howItWorks: {
+      title: 'Cách Bộ đếm Calo Ảnh Hoạt động',
+      subtitle: 'Ba bước đơn giản. Không cần nhập liệu thủ công. Chụp và biết ngay.',
+      steps: [
+        { num: '01', title: 'Nhận diện món ăn từ ảnh', desc: 'SnapCalo sử dụng thị giác máy tính tiên tiến để phân tích ảnh bữa ăn của bạn. Nhận diện nguyên liệu, phương pháp nấu ăn và nhận biết món ăn hỗn hợp.' },
+        { num: '02', title: 'Ước tính Calo & Dinh dưỡng', desc: 'Sau khi nhận diện món ăn, AI của chúng tôi ước tính khẩu phần bằng phân tích hình ảnh. Tính calo, protein, chất béo và carbs.' },
+        { num: '03', title: 'Theo dõi & Cải thiện', desc: 'Xem tiến độ hàng ngày, nhận lời khuyên cá nhân và xây dựng thói quen ăn uống lành mạnh. AI học theo mẫu của bạn và ngày càng chính xác.' },
+      ],
+    },
+    accuracy: {
+      title: 'Độ chính xác như thế nào?',
+      subtitle: 'Chúng tôi biết bạn quan tâm đến độ chính xác. Dưới đây là cách SnapCalo đảm bảo ước tính calo đáng tin cậy.',
+      items: [
+        { title: 'Phân tích hình ảnh', desc: 'AI của chúng tôi phân tích tỷ lệ thực phẩm, kết cấu và phương pháp nấu ăn — không chỉ so khớp ảnh với cơ sở dữ liệu.' },
+        { title: 'Ước tính khẩu phần', desc: 'Sử dụng đối tượng tham chiếu trong ảnh để ước tính khẩu phần thực tế.' },
+        { title: 'Học hỏi theo thời gian', desc: 'Càng chụp nhiều, càng hiểu rõ khẩu phần điển hình và biến thể địa phương của bạn.' },
+      ],
+      note: 'Dựa trên thử nghiệm của chúng tôi, SnapCalo đạt độ chính xác ~95% cho các món ăn Đông Nam Á phổ biến. Bạn luôn có thể điều chỉnh khẩu phần thủ công.',
+    },
+    foods: { title: 'Khám phá món ăn địa phương', subtitle: 'SnapCalo nhận diện hàng nghìn món ăn Đông Nam Á. Dưới đây là một vài ví dụ.' },
+    testimonials: {
+      title: 'Được yêu thích khắp Đông Nam Á',
+      items: [
+        { quote: 'Cuối cùng cũng có ứng dụng biết Nasi Lemak không chỉ là cơm! Lượng calo rất chính xác.', name: 'Aisyah', location: 'Kuala Lumpur, Malaysia' },
+        { quote: 'Tôi dùng hàng ngày cho Phở và Bún Chả. Tốt hơn hẳn các ứng dụng calo thông thường.', name: 'Minh', location: 'Thành phố Hồ Chí Minh, Việt Nam' },
+        { quote: 'AI nhận diện Pad Thai của tôi ngay cả với thêm đậu phộng. Giảm 4kg trong 2 tháng.', name: 'Pim', location: 'Bangkok, Thái Lan' },
+      ],
+    },
+    faq: {
+      title: 'Câu hỏi thường gặp',
+      items: [
+        { q: 'SnapCalo có miễn phí không?', a: 'Có! Bạn có thể chụp tối đa 5 bữa ăn mỗi ngày miễn phí. Nâng cấp lên Pro để chụp không giới hạn và theo dõi dinh dưỡng chi tiết.' },
+        { q: 'Độ chính xác của ước tính calo?', a: 'AI của chúng tôi đạt độ chính xác khoảng 95% cho các món ăn Đông Nam Á phổ biến. Bạn luôn có thể điều chỉnh khẩu phần thủ công.' },
+        { q: 'Có hoạt động với tất cả loại thực phẩm không?', a: 'SnapCalo được đào tạo đặc biệt cho ẩm thực Đông Nam Á. Cũng hoạt động tốt với món Âu, Nhật, Hàn và Trung.' },
+        { q: 'Tôi có cần nhập nguyên liệu thủ công không?', a: 'Không! Chỉ cần chụp ảnh và AI sẽ làm phần còn lại. Không cần gõ, không cần tìm kiếm.' },
+        { q: 'Dữ liệu của tôi có riêng tư không?', a: 'Hoàn toàn. Ảnh bữa ăn và dữ liệu sức khỏe của bạn được mã hóa và không chia sẻ với bên thứ ba.' },
+      ],
+    },
+    download: {
+      title: 'Tải SnapCalo ngay hôm nay',
+      subtitle: 'Quét mã QR bằng camera điện thoại để tải ứng dụng. Có sẵn trên iOS và Android.',
+      scan: 'Quét để tải',
+      appStore: 'App Store',
+      googlePlay: 'Google Play',
+      tag1: 'Tải miễn phí',
+      tag2: 'Không cần thẻ tín dụng',
+      tag3: 'Hủy bất cứ lúc nào',
+    },
+    pricing: {
+      title: 'Giá đơn giản',
+      subtitle: 'Bắt đầu miễn phí. Nâng cấp khi bạn sẵn sàng.',
+      free: { name: 'Miễn phí', desc: 'Hoàn hảo để bắt đầu', price: '$0', period: '/tháng', features: ['5 lần chụp/ngày', 'Theo dõi calo cơ bản', 'Báo cáo hàng tuần', 'Có quảng cáo'], cta: 'Bắt đầu' },
+      pro: { name: 'Pro', desc: 'Dành cho người nghiêm túc', price: '$4.99', period: '/tháng', badge: 'PHỔ BIẾN NHẤT', features: ['Chụp không giới hạn', 'Gợi ý món ăn AI', 'Theo dõi dinh dưỡng', 'Kế hoạch ăn uống cá nhân', 'Không quảng cáo', 'Xuất dữ liệu'], cta: 'Nâng cấp Pro' },
+    },
+    cta: { title: 'Sẵn sàng chụp món ăn đầu tiên?', subtitle: 'Tham gia cùng 2,400+ người Đông Nam Á đang theo dõi thông minh hơn với SnapCalo.', ctaPrimary: 'Dùng thử miễn phí', ctaSecondary: 'Tìm hiểu thêm' },
+    footer: { tagline: 'Trình theo dõi calo AI cho món ăn Đông Nam Á.', product: 'Sản phẩm', company: 'Công ty', legal: 'Pháp lý', copyright: '2026 SnapCalo.ai. Được tạo ra với tình yêu dành cho Đông Nam Á.' },
+  },
+
+  th: {
+    nav: { features: 'ฟีเจอร์', howItWorks: 'วิธีใช้', accuracy: 'ความแม่นยำ', foods: 'อาหาร', tryFree: 'ทดลองฟรี' },
+    hero: {
+      badge: 'ขับเคลื่อนด้วย AI สำหรับเอเชียตะวันออกเฉียงใต้',
+      title1: 'ถ่ายรูปอาหาร.',
+      title2: 'รู้จำนวนแคลอรี.',
+      desc: 'ไม่ต้องบันทึกเอง แค่ถ่ายรูปนาซิเลอมัก โฟ่ ผัดไทย — หรืออาหารจานไหนก็ได้ — แล้วรู้แคลอรีและสารอาหารทันที',
+      ctaPrimary: 'ทดลองฟรี',
+      ctaSecondary: 'ดูวิธีใช้',
+      trust1: 'ไม่ต้องใช้บัตรเครดิต',
+      trust2: 'ยกเลิกได้ตลอดเวลา',
+      users: 'คนเอเชียตะวันออกเฉียงใต้ติดตามแคลอรีอย่างชาญฉลาด',
+    },
+    socialProof: { dishes: 'เมนูท้องถิ่น', users: 'ผู้ใช้งาน', speed: 'เวลาวิเคราะห์ AI', accuracy: 'ความแม่นยำ' },
+    features: {
+      title: 'ทำไมต้อง SnapCalo?',
+      subtitle: 'สร้างมาสำหรับอาหารเอเชียตะวันออกเฉียงใต้โดยเฉพาะ ไม่ต้องเดาแคลอรีของอาหารท้องถิ่นอีกต่อไป',
+      items: [
+        { title: 'ถ่าย & ติดตาม', desc: 'ถ่ายรูปอาหารจานไหนก็ได้ AI ของเราจะระบุอาหารและคำนวณแคลอรีในเวลาไม่ถึง 2 วินาที' },
+        { title: 'ฐานข้อมูลอาหารท้องถิ่น', desc: 'ฝึกฝนด้วยเมนูเอเชียตะวันออกเฉียงใต้กว่า 10,000 จาน จากนาซิโกเร็งถึงบุญฉา เรารู้จักเมนูโปรดของคุณ' },
+        { title: 'เป้าหมายอัจฉริยะ', desc: 'ตั้งเป้าหมายแคลอรีรายวัน รับคำแนะนำส่วนตัวตามระดับกิจกรรม อายุ และเป้าหมายน้ำหนัก' },
+        { title: 'AI เรียนรู้', desc: 'ยิ่งใช้ยิ่งฉลาด เรียนรู้พฤติกรรมการกิน ปริมาณอาหาร และร้านอาหารท้องถิ่นของคุณ' },
+      ],
+    },
+    howItWorks: {
+      title: 'เครื่องมือนับแคลอรีจากรูปทำงานอย่างไร',
+      subtitle: 'สามขั้นตอนง่ายๆ ไม่ต้องกรอกข้อมูลเอง แค่ถ่ายแล้วรู้เลย',
+      steps: [
+        { num: '01', title: 'ระบุอาหารจากรูปภาพ', desc: 'SnapCalo ใช้คอมพิวเตอร์วิชั่นขั้นสูงวิเคราะห์รูปอาหารของคุณ ระบุวัตถุดิบ วิธีการปรุง และจดจำอาหารผสม' },
+        { num: '02', title: 'ประมาณแคลอรีและสารอาหาร', desc: 'หลังระบุอาหารแล้ว AI ประมาณปริมาณอาหารจากการวิเคราะห์ภาพ คำนวณแคลอรี โปรตีน ไขมัน และคาร์บ' },
+        { num: '03', title: 'ติดตาม & พัฒนา', desc: 'ดูความคืบหน้ารายวัน รับเคล็ดลับส่วนตัว และสร้างนิสัยการกินที่ดี AI เรียนรู้รูปแบบของคุณและแม่นยำขึ้นเรื่อยๆ' },
+      ],
+    },
+    accuracy: {
+      title: 'แม่นยำแค่ไหน?',
+      subtitle: 'เรารู้ว่าคุณใส่ใจความแม่นยำ นี่คือวิธีที่ SnapCalo รับประกันการประมาณแคลอรีที่เชื่อถือได้',
+      items: [
+        { title: 'วิเคราะห์ภาพ', desc: 'AI ของเราวิเคราะห์สัดส่วนอาหาร เนื้อสัมผัส และวิธีการปรุง — ไม่ใช่แค่จับคู่รูปกับฐานข้อมูล' },
+        { title: 'ประมาณปริมาณ', desc: 'ใช้วัตถุอ้างอิงในรูปเพื่อประมาณปริมาณอาหารที่สมจริง' },
+        { title: 'เรียนรู้ตลอดเวลา', desc: 'ยิ่งถ่ายบ่อย ยิ่งเข้าใจปริมาณที่เป็นเอกลักษณ์และความหลากหลายในท้องถิ่นของคุณ' },
+      ],
+      note: 'จากการทดสอบของเรา SnapCalo มีความแม่นยำ ~95% สำหรับอาหารเอเชียตะวันออกเฉียงใต้ทั่วไป คุณสามารถปรับปริมาณอาหารเองได้เสมอ',
+    },
+    foods: { title: 'รู้จักเมนูโปรดในท้องถิ่น', subtitle: 'SnapCalo จดจำอาหารเอเชียตะวันออกเฉียงใต้นับพันรายการ นี่คือตัวอย่างบางส่วน' },
+    testimonials: {
+      title: 'ได้รับความรักทั่วเอเชียตะวันออกเฉียงใต้',
+      items: [
+        { quote: 'สักทีมีแอปที่รู้ว่านาซิเลอมักไม่ใช่แค่ข้าว! นับแคลอรีได้แม่นยำมาก', name: 'Aisyah', location: 'กัวลาลัมเปอร์ มาเลเซีย' },
+        { quote: 'ฉันใช้ทุกวันสำหรับโฟ่และบุญฉา ดีกว่าแอปนับแคลอรีทั่วไปมาก', name: 'Minh', location: 'โฮจิมินห์ซิตี้ เวียดนาม' },
+        { quote: 'AI จดจำผัดไทยของฉันได้แม้ใส่ถั่วเพิ่ม ลดได้ 4 กิโลใน 2 เดือน', name: 'Pim', location: 'กรุงเทพฯ ไทย' },
+      ],
+    },
+    faq: {
+      title: 'คำถามที่พบบ่อย',
+      items: [
+        { q: 'SnapCalo ใช้ฟรีไหม?', a: 'ใช่! คุณถ่ายอาหารได้สูงสุด 5 มื้อต่อวันฟรี อัปเกรดเป็น Pro เพื่อถ่ายไม่จำกัดและติดตามสารอาหารแบบละเอียด' },
+        { q: 'การประมาณแคลอรีแม่นยำแค่ไหน?', a: 'AI ของเรามีความแม่นยำประมาณ 95% สำหรับอาหารเอเชียตะวันออกเฉียงใต้ทั่วไป คุณสามารถปรับปริมาณอาหารเองได้เสมอ' },
+        { q: 'ใช้ได้กับอาหารทุกประเภทไหม?', a: 'SnapCalo ถูกฝึกฝนเป็นพิเศษสำหรับอาหารเอเชียตะวันออกเฉียงใต้ ใช้ได้ดีกับอาหารตะวันตก ญี่ปุ่น เกาหลี และจีน' },
+        { q: 'ต้องกรอกวัตถุดิบเองไหม?', a: 'ไม่! แค่ถ่ายรูปแล้ว AI จะจัดการให้ ไม่ต้องพิมพ์ ไม่ต้องค้นหา' },
+        { q: 'ข้อมูลของฉันเป็นส่วนตัวไหม?', a: 'แน่นอน รูปอาหารและข้อมูลสุขภาพของคุณถูกเข้ารหัสและไม่แชร์กับบุคคลที่สาม' },
+      ],
+    },
+    download: {
+      title: 'ดาวน์โหลด SnapCalo วันนี้',
+      subtitle: 'สแกน QR โค้ดด้วยกล้องโทรศัพท์เพื่อดาวน์โหลดแอป ใช้ได้บน iOS และ Android',
+      scan: 'สแกนเพื่อดาวน์โหลด',
+      appStore: 'App Store',
+      googlePlay: 'Google Play',
+      tag1: 'ดาวน์โหลดฟรี',
+      tag2: 'ไม่ต้องใช้บัตรเครดิต',
+      tag3: 'ยกเลิกได้ตลอดเวลา',
+    },
+    pricing: {
+      title: 'ราคาง่ายๆ',
+      subtitle: 'เริ่มต้นฟรี อัปเกรดเมื่อคุณพร้อม',
+      free: { name: 'ฟรี', desc: 'เหมาะสำหรับเริ่มต้น', price: '$0', period: '/เดือน', features: ['ถ่าย 5 ครั้ง/วัน', 'ติดตามแคลอรีพื้นฐาน', 'รายงานรายสัปดาห์', 'มีโฆษณา'], cta: 'เริ่มต้น' },
+      pro: { name: 'Pro', desc: 'สำหรับคนจริงจัง', price: '$4.99', period: '/เดือน', badge: 'ยอดนิยมที่สุด', features: ['ถ่ายไม่จำกัด', 'แนะนำอาหาร AI', 'ติดตามสารอาหาร', 'แผนอาหารส่วนตัว', 'ไม่มีโฆษณา', 'ส่งออกข้อมูล'], cta: 'อัปเกรดเป็น Pro' },
+    },
+    cta: { title: 'พร้อมถ่ายมื้อแรกของคุณ?', subtitle: 'เข้าร่วมกับ 2,400+ คนเอเชียตะวันออกเฉียงใต้ที่ติดตามแคลอรีอย่างชาญฉลาดด้วย SnapCalo', ctaPrimary: 'ทดลองฟรี', ctaSecondary: 'เรียนรู้เพิ่มเติม' },
+    footer: { tagline: 'เครื่องมือติดตามแคลอรี AI สำหรับอาหารเอเชียตะวันออกเฉียงใต้', product: 'ผลิตภัณฑ์', company: 'บริษัท', legal: 'กฎหมาย', copyright: '2026 SnapCalo.ai. สร้างด้วยความรักสำหรับเอเชียตะวันออกเฉียงใต้' },
+  },
+
+  zh: {
+    nav: { features: '功能', howItWorks: '使用方法', accuracy: '准确度', foods: '美食', tryFree: '免费试用' },
+    hero: {
+      badge: '专为东南亚打造的 AI',
+      title1: '拍一拍你的餐。',
+      title2: '立即知道卡路里。',
+      desc: '告别手动记录。只需拍下椰浆饭、越南粉、泰式炒河粉 —— 或任何菜肴 —— 即刻获取卡路里和营养成分。',
+      ctaPrimary: '免费试用',
+      ctaSecondary: '看看怎么用',
+      trust1: '无需信用卡',
+      trust2: '随时取消',
+      users: '位东南亚用户正在智能追踪',
+    },
+    socialProof: { dishes: '本地菜品已追踪', users: '活跃用户', speed: 'AI 分析时间', accuracy: '识别准确度' },
+    features: {
+      title: '为什么选择 SnapCalo？',
+      subtitle: '专为东南亚饮食打造。再也不用猜本地菜的卡路里了。',
+      items: [
+        { title: '拍照即追踪', desc: '拍一张任何餐点的照片。我们的 AI 在 2 秒内识别菜品并计算卡路里。无需打字，无需搜索。' },
+        { title: '本地美食数据库', desc: '基于 10,000+ 道东南亚菜品训练。从印尼炒饭到越南烤肉粉，我们懂你的最爱。' },
+        { title: '智能目标', desc: '设定每日卡路里目标。根据你的活动量、年龄和体重目标提供个性化建议。' },
+        { title: 'AI 自学习', desc: '用得越多越聪明。学习你的饮食习惯、份量大小，甚至你常去的本地餐厅。' },
+      ],
+    },
+    howItWorks: {
+      title: '照片卡路里计数器如何工作',
+      subtitle: '简单三步。无需手动输入。拍一拍，就知道。',
+      steps: [
+        { num: '01', title: '从照片识别菜品', desc: 'SnapCalo 使用先进的计算机视觉分析你的餐点照片。识别食材、烹饪方式，识别混合菜肴。' },
+        { num: '02', title: '估算卡路里和营养', desc: '识别菜品后，我们的 AI 通过视觉分析估算份量。计算卡路里、蛋白质、脂肪和碳水化合物。' },
+        { num: '03', title: '追踪并改善', desc: '查看每日进度，获取个性化建议，养成健康饮食习惯。AI 学习你的模式，越来越精准。' },
+      ],
+    },
+    accuracy: {
+      title: '有多准确？',
+      subtitle: '我们知道你关心精准度。以下是 SnapCalo 如何确保可靠的卡路里估算。',
+      items: [
+        { title: '视觉分析', desc: '我们的 AI 分析食物比例、质地和烹饪方式 —— 不只是将照片与数据库匹配。' },
+        { title: '份量估算', desc: '利用照片中的参照物（如手或勺子）来估算实际份量。' },
+        { title: '持续学习', desc: '你拍的照片越多，它越了解你的典型份量和本地变化。' },
+      ],
+      note: '根据我们的测试，SnapCalo 对常见东南亚菜品的准确度约为 95%。你也可以随时手动调整份量。',
+    },
+    foods: { title: '认识本地美食', subtitle: 'SnapCalo 识别数千道东南亚菜品。以下只是其中一部分。' },
+    testimonials: {
+      title: '深受东南亚用户喜爱',
+      items: [
+        { quote: '终于有应用知道椰浆饭不只是"米饭"！卡路里计算 surprisingly 准确。', name: 'Aisyah', location: '吉隆坡，马来西亚' },
+        { quote: '我每天都用来拍越南粉和烤肉粉。比普通卡路里应用好用多了。', name: 'Minh', location: '胡志明市，越南' },
+        { quote: 'AI 甚至识别出我加了额外花生的泰式炒河粉。两个月瘦了 4 公斤。', name: 'Pim', location: '曼谷，泰国' },
+      ],
+    },
+    faq: {
+      title: '常见问题',
+      items: [
+        { q: 'SnapCalo 是免费的吗？', a: '是的！每天可以免费拍 5 餐。升级到 Pro 享受无限拍照和详细营养追踪。' },
+        { q: '卡路里估算有多准确？', a: '我们的 AI 对常见东南亚菜品的准确度约为 95%。你也可以随时手动调整份量。' },
+        { q: '适用于所有类型的食物吗？', a: 'SnapCalo 专门针对东南亚美食训练。对西餐、日料、韩餐和中餐也同样适用。' },
+        { q: '需要手动输入食材吗？', a: '不需要！只需拍一张照片，AI 自动完成。无需打字，无需搜索。' },
+        { q: '我的数据隐私吗？', a: '绝对隐私。你的餐点照片和健康数据均已加密，不会与第三方共享。' },
+      ],
+    },
+    download: {
+      title: '立即下载 SnapCalo',
+      subtitle: '用手机相机扫描二维码即可下载应用。支持 iOS 和 Android。',
+      scan: '扫码下载',
+      appStore: 'App Store',
+      googlePlay: 'Google Play',
+      tag1: '免费下载',
+      tag2: '无需信用卡',
+      tag3: '随时取消',
+    },
+    pricing: {
+      title: '简单定价',
+      subtitle: '免费开始。准备好了再升级。',
+      free: { name: '免费版', desc: '适合初次体验', price: '¥0', period: '/月', features: ['每天 5 次拍照', '基础卡路里追踪', '每周报告', '含广告'], cta: '开始使用' },
+      pro: { name: '专业版', desc: '适合认真追踪者', price: '$4.99', period: '/月', badge: '最受欢迎', features: ['无限拍照', 'AI 膳食推荐', '营养追踪', '个性化饮食计划', '无广告', '导出数据'], cta: '升级到专业版' },
+    },
+    cta: { title: '准备好拍下第一餐了吗？', subtitle: '加入 2,400+ 位正在用 SnapCalo 智能追踪的东南亚用户。', ctaPrimary: '免费试用', ctaSecondary: '了解更多' },
+    footer: { tagline: '专为东南亚美食打造的 AI 卡路里追踪器。', product: '产品', company: '公司', legal: '法律', copyright: '2026 SnapCalo.ai. 为东南亚用心打造。' },
+  },
+}
