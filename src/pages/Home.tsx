@@ -23,7 +23,7 @@ import {
   Barcode,
   Bot,
   Download,
-  Globe2,  Share2,  Gift,  Star,
+  Globe2,  Share2,  Gift,  Star,  Ticket,
 } from 'lucide-react'
 import { useI18n } from '../i18n/I18nContext'
 import { languages, type Language } from '../i18n/translations'
@@ -651,6 +651,17 @@ function Refer() {
         </div>
 
         <div className={`mt-12 text-center transition-all duration-700 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <div className="inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-4 rounded-2xl shadow-lg">
+            <Ticket className="w-5 h-5 text-emerald-400" />
+            <div className="text-left">
+              <p className="text-[10px] text-gray-400 uppercase tracking-wider">Example Invite Code</p>
+              <p className="text-lg font-bold tracking-widest">VOUCHER</p>
+            </div>
+          </div>
+          <p className="text-xs text-gray-400 mt-3">Your actual code will be generated in the app</p>
+        </div>
+
+        <div className={`mt-8 text-center transition-all duration-700 delay-400 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <a href="#download" className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition shadow-lg shadow-emerald-200">
             <Sparkles className="w-5 h-5" />
             {t.refer.cta}
