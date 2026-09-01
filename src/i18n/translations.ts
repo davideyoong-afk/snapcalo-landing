@@ -22,6 +22,7 @@ export const translations: Record<Language, {
   download: { title: string; subtitle: string; scan: string; apk: string; apkSub: string; webDemo: string; webDemoSub: string; appStore: string; googlePlay: string; comingSoon: string; tag1: string; tag2: string; tag3: string }
   pricing: { title: string; subtitle: string; free: { name: string; desc: string; price: string; period: string; features: string[]; cta: string }; pro: { name: string; desc: string; price: string; period: string; badge: string; features: string[]; cta: string } }
   cta: { title: string; subtitle: string; ctaPrimary: string; ctaSecondary: string }
+  refer: { title: string; subtitle: string; steps: { num: string; title: string; desc: string }[]; cta: string }
   footer: { tagline: string; product: string; company: string; legal: string; copyright: string }
 }> = {
   en: {
@@ -110,6 +111,16 @@ export const translations: Record<Language, {
       pro: { name: 'Pro', desc: 'For serious trackers', price: '$4.99', period: '/month', badge: 'MOST POPULAR', features: ['Unlimited snaps', 'AI meal recommendations', 'Macro tracking', 'Personalized diet plans', 'Refer friends — earn RM5 credit each', 'No ads'], cta: 'Upgrade to Pro' },
     },
     cta: { title: 'Ready to Snap Your First Meal?', subtitle: 'Join 2,400+ Southeast Asians who are already tracking smarter with SnapCalo.', ctaPrimary: 'Try For Free', ctaSecondary: 'Learn More' },
+    refer: {
+      title: 'Refer a Friend, Earn Free Pro',
+      subtitle: 'Give 7 days of Pro to a friend. When they subscribe, you get 14 days free.',
+      steps: [
+        { num: '01', title: 'Share Your Code', desc: 'Copy your unique referral code from the app and share it with friends.' },
+        { num: '02', title: 'Friend Gets 7 Days Free', desc: 'Your friend installs SnapCalo, enters your code, and unlocks 7 days of Pro instantly.' },
+        { num: '03', title: 'You Get 14 Days Free', desc: 'When your friend subscribes to Pro, you earn 14 days of Pro free as a thank you.' },
+      ],
+      cta: 'Get Your Referral Code',
+    },
     footer: { tagline: 'AI calorie tracking for Southeast Asian food.', product: 'Product', company: 'Company', legal: 'Legal', copyright: '2026 SnapCalo.ai. Made with love for Southeast Asia.' },
   },
 
@@ -199,6 +210,16 @@ export const translations: Record<Language, {
       pro: { name: 'Pro', desc: 'Untuk penjejak serius', price: '$4.99', period: '/bulan', badge: 'PALING POPULAR', features: ['Snap tanpa had', 'Cadangan makanan AI', 'Jejak makro', 'Pelan diet peribadi', 'Ajak rakan — dapat kredit RM5 setiap seorang', 'Tiada iklan'], cta: 'Naik Taraf ke Pro' },
     },
     cta: { title: 'Sedia untuk Snap Makanan Pertama Anda?', subtitle: 'Sertai 2,400+ rakyat Asia Tenggara yang sudah menjejak dengan bijak menggunakan SnapCalo.', ctaPrimary: 'Cuba Percuma', ctaSecondary: 'Ketahui Lebih Lanjut' },
+    refer: {
+      title: 'Jemput Rakan, Dapat Pro Percuma',
+      subtitle: 'Beri 7 hari Pro kepada rakan. Apabila mereka langgan, anda dapat 14 hari percuma.',
+      steps: [
+        { num: '01', title: 'Kongsi Kod Anda', desc: 'Salin kod rujukan unik anda dari aplikasi dan kongsi dengan rakan.' },
+        { num: '02', title: 'Rakan Dapat 7 Hari Percuma', desc: 'Rakan anda memasang SnapCalo, masukkan kod anda, dan buka kunci 7 hari Pro segera.' },
+        { num: '03', title: 'Anda Dapat 14 Hari Percuma', desc: 'Apabila rakan anda langgan Pro, anda mendapat 14 hari Pro percuma sebagai penghargaan.' },
+      ],
+      cta: 'Dapatkan Kod Rujukan Anda',
+    },
     footer: { tagline: 'Penjejak kalori AI untuk makanan Asia Tenggara.', product: 'Produk', company: 'Syarikat', legal: 'Undang-undang', copyright: '2026 SnapCalo.ai. Dibuat dengan kasih sayang untuk Asia Tenggara.' },
   },
 
@@ -288,6 +309,16 @@ export const translations: Record<Language, {
       pro: { name: 'Pro', desc: 'Untuk pelacak serius', price: '$4.99', period: '/bulan', badge: 'PALING POPULER', features: ['Foto tanpa batas', 'Rekomendasi makanan AI', 'Pelacakan makro', 'Rencana diet pribadi', 'Ajak teman — dapatkan kredit RM5 per orang', 'Tanpa iklan'], cta: 'Upgrade ke Pro' },
     },
     cta: { title: 'Siap Foto Makanan Pertamamu?', subtitle: 'Bergabung dengan 2,400+ orang Asia Tenggara yang sudah melacak dengan cerdas menggunakan SnapCalo.', ctaPrimary: 'Coba Gratis', ctaSecondary: 'Pelajari Lebih Lanjut' },
+    refer: {
+      title: 'Ajak Teman, Dapat Pro Gratis',
+      subtitle: 'Beri 7 hari Pro ke teman. Saat mereka berlangganan, kamu dapat 14 hari gratis.',
+      steps: [
+        { num: '01', title: 'Bagikan Kode Kamu', desc: 'Salin kode rujukan unikmu dari aplikasi dan bagikan ke teman.' },
+        { num: '02', title: 'Teman Dapat 7 Hari Gratis', desc: 'Temanmu mengunduh SnapCalo, masukkan kode, dan langsung mendapat 7 hari Pro.' },
+        { num: '03', title: 'Kamu Dapat 14 Hari Gratis', desc: 'Saat temanmu berlangganan Pro, kamu mendapat 14 hari Pro gratis sebagai ucapan terima kasih.' },
+      ],
+      cta: 'Dapatkan Kode Rujukanmu',
+    },
     footer: { tagline: 'Pelacak kalori AI untuk makanan Asia Tenggara.', product: 'Produk', company: 'Perusahaan', legal: 'Hukum', copyright: '2026 SnapCalo.ai. Dibuat dengan cinta untuk Asia Tenggara.' },
   },
 
@@ -377,6 +408,16 @@ export const translations: Record<Language, {
       pro: { name: 'Pro', desc: 'Dành cho người nghiêm túc', price: '$4.99', period: '/tháng', badge: 'PHỔ BIẾN NHẤT', features: ['Chụp không giới hạn', 'Gợi ý món ăn AI', 'Theo dõi dinh dưỡng', 'Kế hoạch ăn uống cá nhân', 'Mời bạn bè — nhận RM5 cho mỗi người', 'Không quảng cáo'], cta: 'Nâng cấp Pro' },
     },
     cta: { title: 'Sẵn sàng chụp món ăn đầu tiên?', subtitle: 'Tham gia cùng 2,400+ người Đông Nam Á đang theo dõi thông minh hơn với SnapCalo.', ctaPrimary: 'Dùng thử miễn phí', ctaSecondary: 'Tìm hiểu thêm' },
+    refer: {
+      title: 'Giới thiệu bạn bè, Nhận Pro miễn phí',
+      subtitle: 'Tặng 7 ngày Pro cho bạn. Khi họ đăng ký, bạn nhận 14 ngày miễn phí.',
+      steps: [
+        { num: '01', title: 'Chia sẻ mã của bạn', desc: 'Sao chép mã giới thiệu duy nhất từ ứng dụng và chia sẻ với bạn bè.' },
+        { num: '02', title: 'Bạn được 7 ngày miễn phí', desc: 'Bạn tải SnapCalo, nhập mã, và mở khóa 7 ngày Pro ngay lập tức.' },
+        { num: '03', title: 'Bạn nhận 14 ngày miễn phí', desc: 'Khi bạn đăng ký Pro, bạn nhận 14 ngày Pro miễn phí để cảm ơn.' },
+      ],
+      cta: 'Lấy mã giới thiệu',
+    },
     footer: { tagline: 'Trình theo dõi calo AI cho món ăn Đông Nam Á.', product: 'Sản phẩm', company: 'Công ty', legal: 'Pháp lý', copyright: '2026 SnapCalo.ai. Được tạo ra với tình yêu dành cho Đông Nam Á.' },
   },
 
@@ -466,6 +507,16 @@ export const translations: Record<Language, {
       pro: { name: 'Pro', desc: 'สำหรับคนจริงจัง', price: '$4.99', period: '/เดือน', badge: 'ยอดนิยมที่สุด', features: ['ถ่ายไม่จำกัด', 'แนะนำอาหาร AI', 'ติดตามสารอาหาร', 'แผนอาหารส่วนตัว', 'ชวนเพื่อน — รับเครดิต RM5 ต่อคน', 'ไม่มีโฆษณา'], cta: 'อัปเกรดเป็น Pro' },
     },
     cta: { title: 'พร้อมถ่ายมื้อแรกของคุณ?', subtitle: 'เข้าร่วมกับ 2,400+ คนเอเชียตะวันออกเฉียงใต้ที่ติดตามแคลอรีอย่างชาญฉลาดด้วย SnapCalo', ctaPrimary: 'ทดลองฟรี', ctaSecondary: 'เรียนรู้เพิ่มเติม' },
+    refer: {
+      title: 'ชวนเพื่อน รับ Pro ฟรี',
+      subtitle: 'มอบ 7 วัน Pro ให้เพื่อน เมื่อเพื่อนสมัคร คุณรับ 14 วันฟรี',
+      steps: [
+        { num: '01', title: 'แชร์โค้ดของคุณ', desc: 'คัดลอกรหัสอ้างอิงจากแอปและแชร์ให้เพื่อน' },
+        { num: '02', title: 'เพื่อนได้ 7 วันฟรี', desc: 'เพื่อนติดตั้ง SnapCalo ใส่โค้ด และปลดล็อก 7 วัน Pro ทันที' },
+        { num: '03', title: 'คุณได้ 14 วันฟรี', desc: 'เมื่อเพื่อนสมัคร Pro คุณได้รับ 14 วัน Pro ฟรีเป็นของขวัญขอบคุณ' },
+      ],
+      cta: 'รับรหัสอ้างอิง',
+    },
     footer: { tagline: 'เครื่องมือติดตามแคลอรี AI สำหรับอาหารเอเชียตะวันออกเฉียงใต้', product: 'ผลิตภัณฑ์', company: 'บริษัท', legal: 'กฎหมาย', copyright: '2026 SnapCalo.ai. สร้างด้วยความรักสำหรับเอเชียตะวันออกเฉียงใต้' },
   },
 
@@ -555,6 +606,16 @@ export const translations: Record<Language, {
       pro: { name: '专业版', desc: '适合认真追踪者', price: '$4.99', period: '/月', badge: '最受欢迎', features: ['无限拍照', 'AI 膳食推荐', '营养追踪', '个性化饮食计划', '邀请好友 —— 每位返 RM5 奖励', '无广告'], cta: '升级到专业版' },
     },
     cta: { title: '准备好拍下第一餐了吗？', subtitle: '加入 2,400+ 位正在用 SnapCalo 智能追踪的东南亚用户。', ctaPrimary: '免费试用', ctaSecondary: '了解更多' },
+    refer: {
+      title: '邀请好友，免费获得 Pro',
+      subtitle: '送给好友 7 天 Pro。当他们订阅时，你获得 14 天免费。',
+      steps: [
+        { num: '01', title: '分享你的推荐码', desc: '从 App 复制你的专属推荐码，分享给好友。' },
+        { num: '02', title: '好友获得 7 天免费', desc: '好友下载 SnapCalo，输入你的推荐码，立即解锁 7 天 Pro。' },
+        { num: '03', title: '你获得 14 天免费', desc: '当好友订阅 Pro 后，你获得 14 天 Pro 免费，作为感谢。' },
+      ],
+      cta: '获取推荐码',
+    },
     footer: { tagline: '专为东南亚美食打造的 AI 卡路里追踪器。', product: '产品', company: '公司', legal: '法律', copyright: '2026 SnapCalo.ai. 为东南亚用心打造。' },
   },
 }
