@@ -29,7 +29,7 @@ import { useI18n } from '../i18n/I18nContext'
 import { languages, type Language } from '../i18n/translations'
 import qrApk from '../assets/qr-apk.svg'
 
-const APK_URL = 'https://expo.dev/artifacts/eas/89z8k55to0-RmbCZ2dLvFcz-lAEBHTtEbrTUK5ZUB6A.apk'
+const APK_URL = 'https://expo.dev/artifacts/eas/Qa2jJqAafBWiheCPgmTVbd2_ZxD_0heoJOBecbqtopM.apk'
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null)

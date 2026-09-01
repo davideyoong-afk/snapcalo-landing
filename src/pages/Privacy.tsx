@@ -4,8 +4,7 @@ export default function Privacy() {
       <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b border-emerald-100">
         <div className="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-xl bg-emerald-500 flex items-center justify-center text-white font-bold">S</div>
-            <span className="font-bold text-xl text-gray-900">SnapCalo</span>
+            <img src="/logo-main.png" alt="SnapCalo" className="h-8 w-auto" />
           </a>
           <a href="/" className="text-sm text-emerald-600 hover:underline">← Back to home</a>
         </div>

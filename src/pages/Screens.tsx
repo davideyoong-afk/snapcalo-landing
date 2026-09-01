@@ -201,7 +201,7 @@ function STrial() {
       </div>
       <div className="mt-auto space-y-1.5">
         <GreenBtn>Start Free Trial</GreenBtn>
-        <p className="text-center text-[8px] text-gray-400">Then $4.99/month · Cancel anytime</p>
+        <p className="text-center text-[8px] text-gray-400">Then $3.99/month · Cancel anytime</p>
         <p className="text-center text-[8px] text-gray-400 underline">Continue with Free</p>
       </div>
     </Phone>
@@ -470,7 +470,7 @@ function SPaywall() {
         </div>
         <div className="border-2 border-gray-100 rounded-xl p-2 flex items-center justify-between">
           <p className="text-[9px] font-bold">Monthly</p>
-          <p className="text-[10px] font-extrabold">$4.99/mo</p>
+          <p className="text-[10px] font-extrabold">$3.99/mo</p>
         </div>
       </div>
       <div className="mt-auto space-y-1">

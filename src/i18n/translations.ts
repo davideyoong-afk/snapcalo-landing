@@ -108,7 +108,7 @@ export const translations: Record<Language, {
       title: 'Simple Pricing',
       subtitle: 'Start free. Upgrade when you are ready.',
       free: { name: 'Free', desc: 'Perfect for getting started', price: '$0', period: '/month', features: ['3 snaps per day', 'Basic calorie tracking', 'Weekly reports', 'Ad-supported'], cta: 'Get Started' },
-      pro: { name: 'Pro', desc: 'For serious trackers', price: '$3.99', period: '/month', badge: 'MOST POPULAR', features: ['Unlimited snaps', 'AI meal recommendations', 'Macro tracking', 'Personalized diet plans', 'Refer friends — earn RM5 credit each', 'No ads'], cta: 'Upgrade to Pro' },
+      pro: { name: 'Pro', desc: 'For serious trackers', price: '$3.99', period: '/month', badge: 'MOST POPULAR', features: ['Unlimited snaps', 'AI meal recommendations', 'Macro tracking', 'Personalized diet plans', 'Refer friends — you both get 7 days of Pro free', 'No ads'], cta: 'Upgrade to Pro' },
     },
     cta: { title: 'Ready to Snap Your First Meal?', subtitle: 'Join 2,400+ Southeast Asians who are already tracking smarter with SnapCalo.', ctaPrimary: 'Try For Free', ctaSecondary: 'Learn More' },
     refer: {
@@ -207,7 +207,7 @@ export const translations: Record<Language, {
       title: 'Harga Mudah',
       subtitle: 'Mula percuma. Naik taraf apabila anda sedia.',
       free: { name: 'Percuma', desc: 'Sempurna untuk permulaan', price: '$0', period: '/bulan', features: ['3 snap sehari', 'Jejak kalori asas', 'Laporan mingguan', 'Disokong iklan'], cta: 'Mula' },
-      pro: { name: 'Pro', desc: 'Untuk penjejak serius', price: '$3.99', period: '/bulan', badge: 'PALING POPULAR', features: ['Snap tanpa had', 'Cadangan makanan AI', 'Jejak makro', 'Pelan diet peribadi', 'Ajak rakan — dapat kredit RM5 setiap seorang', 'Tiada iklan'], cta: 'Naik Taraf ke Pro' },
+      pro: { name: 'Pro', desc: 'Untuk penjejak serius', price: '$3.99', period: '/bulan', badge: 'PALING POPULAR', features: ['Snap tanpa had', 'Cadangan makanan AI', 'Jejak makro', 'Pelan diet peribadi', 'Ajak rakan — anda berdua dapat 7 hari Pro percuma', 'Tiada iklan'], cta: 'Naik Taraf ke Pro' },
     },
     cta: { title: 'Sedia untuk Snap Makanan Pertama Anda?', subtitle: 'Sertai 2,400+ rakyat Asia Tenggara yang sudah menjejak dengan bijak menggunakan SnapCalo.', ctaPrimary: 'Cuba Percuma', ctaSecondary: 'Ketahui Lebih Lanjut' },
     refer: {
@@ -306,7 +306,7 @@ export const translations: Record<Language, {
       title: 'Harga Sederhana',
       subtitle: 'Mulai gratis. Upgrade saat kamu siap.',
       free: { name: 'Gratis', desc: 'Sempurna untuk memulai', price: '$0', period: '/bulan', features: ['3 foto per hari', 'Pelacakan kalori dasar', 'Laporan mingguan', 'Dengan iklan'], cta: 'Mulai' },
-      pro: { name: 'Pro', desc: 'Untuk pelacak serius', price: '$3.99', period: '/bulan', badge: 'PALING POPULER', features: ['Foto tanpa batas', 'Rekomendasi makanan AI', 'Pelacakan makro', 'Rencana diet pribadi', 'Ajak teman — dapatkan kredit RM5 per orang', 'Tanpa iklan'], cta: 'Upgrade ke Pro' },
+      pro: { name: 'Pro', desc: 'Untuk pelacak serius', price: '$3.99', period: '/bulan', badge: 'PALING POPULER', features: ['Foto tanpa batas', 'Rekomendasi makanan AI', 'Pelacakan makro', 'Rencana diet pribadi', 'Ajak teman — kalian berdua dapat 7 hari Pro gratis', 'Tanpa iklan'], cta: 'Upgrade ke Pro' },
     },
     cta: { title: 'Siap Foto Makanan Pertamamu?', subtitle: 'Bergabung dengan 2,400+ orang Asia Tenggara yang sudah melacak dengan cerdas menggunakan SnapCalo.', ctaPrimary: 'Coba Gratis', ctaSecondary: 'Pelajari Lebih Lanjut' },
     refer: {
@@ -405,7 +405,7 @@ export const translations: Record<Language, {
       title: 'Giá đơn giản',
       subtitle: 'Bắt đầu miễn phí. Nâng cấp khi bạn sẵn sàng.',
       free: { name: 'Miễn phí', desc: 'Hoàn hảo để bắt đầu', price: '$0', period: '/tháng', features: ['3 lần chụp/ngày', 'Theo dõi calo cơ bản', 'Báo cáo hàng tuần', 'Có quảng cáo'], cta: 'Bắt đầu' },
-      pro: { name: 'Pro', desc: 'Dành cho người nghiêm túc', price: '$3.99', period: '/tháng', badge: 'PHỔ BIẾN NHẤT', features: ['Chụp không giới hạn', 'Gợi ý món ăn AI', 'Theo dõi dinh dưỡng', 'Kế hoạch ăn uống cá nhân', 'Mời bạn bè — nhận RM5 cho mỗi người', 'Không quảng cáo'], cta: 'Nâng cấp Pro' },
+      pro: { name: 'Pro', desc: 'Dành cho người nghiêm túc', price: '$3.99', period: '/tháng', badge: 'PHỔ BIẾN NHẤT', features: ['Chụp không giới hạn', 'Gợi ý món ăn AI', 'Theo dõi dinh dưỡng', 'Kế hoạch ăn uống cá nhân', 'Mời bạn bè — cả hai cùng được 7 ngày Pro miễn phí', 'Không quảng cáo'], cta: 'Nâng cấp Pro' },
     },
     cta: { title: 'Sẵn sàng chụp món ăn đầu tiên?', subtitle: 'Tham gia cùng 2,400+ người Đông Nam Á đang theo dõi thông minh hơn với SnapCalo.', ctaPrimary: 'Dùng thử miễn phí', ctaSecondary: 'Tìm hiểu thêm' },
     refer: {
@@ -504,7 +504,7 @@ export const translations: Record<Language, {
       title: 'ราคาง่ายๆ',
       subtitle: 'เริ่มต้นฟรี อัปเกรดเมื่อคุณพร้อม',
       free: { name: 'ฟรี', desc: 'เหมาะสำหรับเริ่มต้น', price: '$0', period: '/เดือน', features: ['ถ่าย 3 ครั้ง/วัน', 'ติดตามแคลอรีพื้นฐาน', 'รายงานรายสัปดาห์', 'มีโฆษณา'], cta: 'เริ่มต้น' },
-      pro: { name: 'Pro', desc: 'สำหรับคนจริงจัง', price: '$3.99', period: '/เดือน', badge: 'ยอดนิยมที่สุด', features: ['ถ่ายไม่จำกัด', 'แนะนำอาหาร AI', 'ติดตามสารอาหาร', 'แผนอาหารส่วนตัว', 'ชวนเพื่อน — รับเครดิต RM5 ต่อคน', 'ไม่มีโฆษณา'], cta: 'อัปเกรดเป็น Pro' },
+      pro: { name: 'Pro', desc: 'สำหรับคนจริงจัง', price: '$3.99', period: '/เดือน', badge: 'ยอดนิยมที่สุด', features: ['ถ่ายไม่จำกัด', 'แนะนำอาหาร AI', 'ติดตามสารอาหาร', 'แผนอาหารส่วนตัว', 'ชวนเพื่อน — ทั้งคู่รับ Pro ฟรี 7 วัน', 'ไม่มีโฆษณา'], cta: 'อัปเกรดเป็น Pro' },
     },
     cta: { title: 'พร้อมถ่ายมื้อแรกของคุณ?', subtitle: 'เข้าร่วมกับ 2,400+ คนเอเชียตะวันออกเฉียงใต้ที่ติดตามแคลอรีอย่างชาญฉลาดด้วย SnapCalo', ctaPrimary: 'ทดลองฟรี', ctaSecondary: 'เรียนรู้เพิ่มเติม' },
     refer: {
@@ -603,7 +603,7 @@ export const translations: Record<Language, {
       title: '简单定价',
       subtitle: '免费开始。准备好了再升级。',
       free: { name: '免费版', desc: '适合初次体验', price: '¥0', period: '/月', features: ['每天 3 次拍照', '基础卡路里追踪', '每周报告', '含广告'], cta: '开始使用' },
-      pro: { name: '专业版', desc: '适合认真追踪者', price: '$3.99', period: '/月', badge: '最受欢迎', features: ['无限拍照', 'AI 膳食推荐', '营养追踪', '个性化饮食计划', '邀请好友 —— 每位返 RM5 奖励', '无广告'], cta: '升级到专业版' },
+      pro: { name: '专业版', desc: '适合认真追踪者', price: '$3.99', period: '/月', badge: '最受欢迎', features: ['无限拍照', 'AI 膳食推荐', '营养追踪', '个性化饮食计划', '邀请好友 —— 双方各得 7 天 Pro 免费', '无广告'], cta: '升级到专业版' },
     },
     cta: { title: '准备好拍下第一餐了吗？', subtitle: '加入 2,400+ 位正在用 SnapCalo 智能追踪的东南亚用户。', ctaPrimary: '免费试用', ctaSecondary: '了解更多' },
     refer: {
