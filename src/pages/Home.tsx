@@ -29,7 +29,7 @@ import { useI18n } from '../i18n/I18nContext'
 import { languages, type Language } from '../i18n/translations'
 import qrApk from '../assets/qr-apk.svg'
 
-const APK_URL = 'https://expo.dev/artifacts/eas/Qa2jJqAafBWiheCPgmTVbd2_ZxD_0heoJOBecbqtopM.apk'
+const APK_URL = 'https://expo.dev/artifacts/eas/_0WIP5-s5vkVv4We13rnhbbWZRYUBHQtBQR6evkgoI4.apk'
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null)
@@ -158,9 +158,12 @@ function Hero() {
               {t.hero.title1}
               <span className="text-emerald-500"> {t.hero.title2}</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto md:mx-0">
+            <p className="text-lg text-gray-600 mb-4 max-w-md mx-auto md:mx-0">
               {t.hero.desc}
             </p>
+            <div className="mb-8 inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold px-5 py-2.5 rounded-full shadow-lg shadow-emerald-200 text-sm md:text-base">
+              🎁 {t.hero.trial}
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a href="#download" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition shadow-lg shadow-emerald-200 flex items-center justify-center gap-2">
                 <Sparkles className="w-5 h-5" />

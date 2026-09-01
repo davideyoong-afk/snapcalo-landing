@@ -11,7 +11,7 @@ export const languages: { code: Language; label: string; flag: string }[] = [
 
 export const translations: Record<Language, {
   nav: { features: string; howItWorks: string; accuracy: string; foods: string; tryFree: string }
-  hero: { badge: string; title1: string; title2: string; desc: string; ctaPrimary: string; ctaSecondary: string; trust1: string; trust2: string; users: string }
+  hero: { badge: string; title1: string; title2: string; desc: string; trial: string; ctaPrimary: string; ctaSecondary: string; trust1: string; trust2: string; users: string }
   socialProof: { dishes: string; users: string; speed: string; accuracy: string }
   features: { title: string; subtitle: string; items: { title: string; desc: string }[] }
   howItWorks: { title: string; subtitle: string; steps: { num: string; title: string; desc: string }[] }
@@ -29,6 +29,7 @@ export const translations: Record<Language, {
     nav: { features: 'Features', howItWorks: 'How It Works', accuracy: 'Accuracy', foods: 'Foods', tryFree: 'Try For Free' },
     hero: {
       badge: 'AI-Powered for Southeast Asia',
+      trial: 'Try Pro free for 14 days — no card needed',
       title1: 'Snap Your Meal.',
       title2: 'Know Your Calories.',
       desc: 'No more manual logging. Just snap a photo of Nasi Lemak, Pho, Pad Thai — or any dish — and get instant calories & macros.',
@@ -107,7 +108,7 @@ export const translations: Record<Language, {
     pricing: {
       title: 'Simple Pricing',
       subtitle: 'Start free. Upgrade when you are ready.',
-      free: { name: 'Free', desc: 'Perfect for getting started', price: '$0', period: '/month', features: ['3 snaps per day', 'Basic calorie tracking', 'Weekly reports', 'Ad-supported'], cta: 'Get Started' },
+      free: { name: 'Free', desc: 'Perfect for getting started', price: '$0', period: '/month', features: ['2 snaps per day', 'Basic calorie tracking', 'Weekly reports', '14-day Pro free trial'], cta: 'Get Started' },
       pro: { name: 'Pro', desc: 'For serious trackers', price: '$3.99', period: '/month', badge: 'MOST POPULAR', features: ['Unlimited snaps', 'AI meal recommendations', 'Macro tracking', 'Personalized diet plans', 'Refer friends — you both get 7 days of Pro free', 'No ads'], cta: 'Upgrade to Pro' },
     },
     cta: { title: 'Ready to Snap Your First Meal?', subtitle: 'Join 2,400+ Southeast Asians who are already tracking smarter with SnapCalo.', ctaPrimary: 'Try For Free', ctaSecondary: 'Learn More' },
@@ -128,6 +129,7 @@ export const translations: Record<Language, {
     nav: { features: 'Ciri', howItWorks: 'Cara Kerja', accuracy: 'Ketepatan', foods: 'Makanan', tryFree: 'Cuba Percuma' },
     hero: {
       badge: 'Dikuasakan AI untuk Asia Tenggara',
+      trial: 'Cuba Pro percuma 14 hari — tiada kad diperlukan',
       title1: 'Snap Makanan Anda.',
       title2: 'Ketahui Kalori.',
       desc: 'Tidak perlu log manual. Ambil gambar Nasi Lemak, Pho, Pad Thai — atau apa sahaja hidangan — dan dapatkan kalori & makro segera.',
@@ -206,7 +208,7 @@ export const translations: Record<Language, {
     pricing: {
       title: 'Harga Mudah',
       subtitle: 'Mula percuma. Naik taraf apabila anda sedia.',
-      free: { name: 'Percuma', desc: 'Sempurna untuk permulaan', price: '$0', period: '/bulan', features: ['3 snap sehari', 'Jejak kalori asas', 'Laporan mingguan', 'Disokong iklan'], cta: 'Mula' },
+      free: { name: 'Percuma', desc: 'Sempurna untuk permulaan', price: '$0', period: '/bulan', features: ['2 snap sehari', 'Jejak kalori asas', 'Laporan mingguan', 'Percubaan Pro 14 hari'], cta: 'Mula' },
       pro: { name: 'Pro', desc: 'Untuk penjejak serius', price: '$3.99', period: '/bulan', badge: 'PALING POPULAR', features: ['Snap tanpa had', 'Cadangan makanan AI', 'Jejak makro', 'Pelan diet peribadi', 'Ajak rakan — anda berdua dapat 7 hari Pro percuma', 'Tiada iklan'], cta: 'Naik Taraf ke Pro' },
     },
     cta: { title: 'Sedia untuk Snap Makanan Pertama Anda?', subtitle: 'Sertai 2,400+ rakyat Asia Tenggara yang sudah menjejak dengan bijak menggunakan SnapCalo.', ctaPrimary: 'Cuba Percuma', ctaSecondary: 'Ketahui Lebih Lanjut' },
@@ -227,6 +229,7 @@ export const translations: Record<Language, {
     nav: { features: 'Fitur', howItWorks: 'Cara Kerja', accuracy: 'Akurasi', foods: 'Makanan', tryFree: 'Coba Gratis' },
     hero: {
       badge: 'Didukung AI untuk Asia Tenggara',
+      trial: 'Coba Pro gratis 14 hari — tanpa kartu',
       title1: 'Foto Makananmu.',
       title2: 'Ketahui Kalorinya.',
       desc: 'Tidak perlu mencatat manual. Cukup foto Nasi Lemak, Pho, Pad Thai — atau hidangan apa saja — dan dapatkan kalori & makro langsung.',
@@ -305,7 +308,7 @@ export const translations: Record<Language, {
     pricing: {
       title: 'Harga Sederhana',
       subtitle: 'Mulai gratis. Upgrade saat kamu siap.',
-      free: { name: 'Gratis', desc: 'Sempurna untuk memulai', price: '$0', period: '/bulan', features: ['3 foto per hari', 'Pelacakan kalori dasar', 'Laporan mingguan', 'Dengan iklan'], cta: 'Mulai' },
+      free: { name: 'Gratis', desc: 'Sempurna untuk memulai', price: '$0', period: '/bulan', features: ['2 foto per hari', 'Pelacakan kalori dasar', 'Laporan mingguan', 'Uji coba Pro 14 hari'], cta: 'Mulai' },
       pro: { name: 'Pro', desc: 'Untuk pelacak serius', price: '$3.99', period: '/bulan', badge: 'PALING POPULER', features: ['Foto tanpa batas', 'Rekomendasi makanan AI', 'Pelacakan makro', 'Rencana diet pribadi', 'Ajak teman — kalian berdua dapat 7 hari Pro gratis', 'Tanpa iklan'], cta: 'Upgrade ke Pro' },
     },
     cta: { title: 'Siap Foto Makanan Pertamamu?', subtitle: 'Bergabung dengan 2,400+ orang Asia Tenggara yang sudah melacak dengan cerdas menggunakan SnapCalo.', ctaPrimary: 'Coba Gratis', ctaSecondary: 'Pelajari Lebih Lanjut' },
@@ -326,6 +329,7 @@ export const translations: Record<Language, {
     nav: { features: 'Tính năng', howItWorks: 'Cách hoạt động', accuracy: 'Độ chính xác', foods: 'Món ăn', tryFree: 'Dùng thử miễn phí' },
     hero: {
       badge: 'AI dành cho Đông Nam Á',
+      trial: 'Dùng thử Pro 14 ngày miễn phí — không cần thẻ',
       title1: 'Chụp món ăn.',
       title2: 'Biết ngay calo.',
       desc: 'Không cần ghi chép thủ công. Chỉ cần chụp ảnh Nasi Lemak, Phở, Pad Thai — hoặc bất kỳ món nào — và nhận ngay calo & dinh dưỡng.',
@@ -404,7 +408,7 @@ export const translations: Record<Language, {
     pricing: {
       title: 'Giá đơn giản',
       subtitle: 'Bắt đầu miễn phí. Nâng cấp khi bạn sẵn sàng.',
-      free: { name: 'Miễn phí', desc: 'Hoàn hảo để bắt đầu', price: '$0', period: '/tháng', features: ['3 lần chụp/ngày', 'Theo dõi calo cơ bản', 'Báo cáo hàng tuần', 'Có quảng cáo'], cta: 'Bắt đầu' },
+      free: { name: 'Miễn phí', desc: 'Hoàn hảo để bắt đầu', price: '$0', period: '/tháng', features: ['2 lần chụp/ngày', 'Theo dõi calo cơ bản', 'Báo cáo hàng tuần', 'Dùng thử Pro 14 ngày'], cta: 'Bắt đầu' },
       pro: { name: 'Pro', desc: 'Dành cho người nghiêm túc', price: '$3.99', period: '/tháng', badge: 'PHỔ BIẾN NHẤT', features: ['Chụp không giới hạn', 'Gợi ý món ăn AI', 'Theo dõi dinh dưỡng', 'Kế hoạch ăn uống cá nhân', 'Mời bạn bè — cả hai cùng được 7 ngày Pro miễn phí', 'Không quảng cáo'], cta: 'Nâng cấp Pro' },
     },
     cta: { title: 'Sẵn sàng chụp món ăn đầu tiên?', subtitle: 'Tham gia cùng 2,400+ người Đông Nam Á đang theo dõi thông minh hơn với SnapCalo.', ctaPrimary: 'Dùng thử miễn phí', ctaSecondary: 'Tìm hiểu thêm' },
@@ -425,6 +429,7 @@ export const translations: Record<Language, {
     nav: { features: 'ฟีเจอร์', howItWorks: 'วิธีใช้', accuracy: 'ความแม่นยำ', foods: 'อาหาร', tryFree: 'ทดลองฟรี' },
     hero: {
       badge: 'ขับเคลื่อนด้วย AI สำหรับเอเชียตะวันออกเฉียงใต้',
+      trial: 'ทดลอง Pro ฟรี 14 วัน — ไม่ต้องใช้บัตร',
       title1: 'ถ่ายรูปอาหาร.',
       title2: 'รู้จำนวนแคลอรี.',
       desc: 'ไม่ต้องบันทึกเอง แค่ถ่ายรูปนาซิเลอมัก โฟ่ ผัดไทย — หรืออาหารจานไหนก็ได้ — แล้วรู้แคลอรีและสารอาหารทันที',
@@ -503,7 +508,7 @@ export const translations: Record<Language, {
     pricing: {
       title: 'ราคาง่ายๆ',
       subtitle: 'เริ่มต้นฟรี อัปเกรดเมื่อคุณพร้อม',
-      free: { name: 'ฟรี', desc: 'เหมาะสำหรับเริ่มต้น', price: '$0', period: '/เดือน', features: ['ถ่าย 3 ครั้ง/วัน', 'ติดตามแคลอรีพื้นฐาน', 'รายงานรายสัปดาห์', 'มีโฆษณา'], cta: 'เริ่มต้น' },
+      free: { name: 'ฟรี', desc: 'เหมาะสำหรับเริ่มต้น', price: '$0', period: '/เดือน', features: ['ถ่าย 2 ครั้ง/วัน', 'ติดตามแคลอรีพื้นฐาน', 'รายงานรายสัปดาห์', 'ทดลอง Pro ฟรี 14 วัน'], cta: 'เริ่มต้น' },
       pro: { name: 'Pro', desc: 'สำหรับคนจริงจัง', price: '$3.99', period: '/เดือน', badge: 'ยอดนิยมที่สุด', features: ['ถ่ายไม่จำกัด', 'แนะนำอาหาร AI', 'ติดตามสารอาหาร', 'แผนอาหารส่วนตัว', 'ชวนเพื่อน — ทั้งคู่รับ Pro ฟรี 7 วัน', 'ไม่มีโฆษณา'], cta: 'อัปเกรดเป็น Pro' },
     },
     cta: { title: 'พร้อมถ่ายมื้อแรกของคุณ?', subtitle: 'เข้าร่วมกับ 2,400+ คนเอเชียตะวันออกเฉียงใต้ที่ติดตามแคลอรีอย่างชาญฉลาดด้วย SnapCalo', ctaPrimary: 'ทดลองฟรี', ctaSecondary: 'เรียนรู้เพิ่มเติม' },
@@ -524,6 +529,7 @@ export const translations: Record<Language, {
     nav: { features: '功能', howItWorks: '使用方法', accuracy: '准确度', foods: '美食', tryFree: '免费试用' },
     hero: {
       badge: '专为东南亚打造的 AI',
+      trial: '免费试用 Pro 14 天 —— 无需绑卡',
       title1: '拍一拍你的餐。',
       title2: '立即知道卡路里。',
       desc: '告别手动记录。只需拍下椰浆饭、越南粉、泰式炒河粉 —— 或任何菜肴 —— 即刻获取卡路里和营养成分。',
@@ -602,7 +608,7 @@ export const translations: Record<Language, {
     pricing: {
       title: '简单定价',
       subtitle: '免费开始。准备好了再升级。',
-      free: { name: '免费版', desc: '适合初次体验', price: '¥0', period: '/月', features: ['每天 3 次拍照', '基础卡路里追踪', '每周报告', '含广告'], cta: '开始使用' },
+      free: { name: '免费版', desc: '适合初次体验', price: '¥0', period: '/月', features: ['每天 2 次拍照', '基础卡路里追踪', '每周报告', '14 天 Pro 免费试用'], cta: '开始使用' },
       pro: { name: '专业版', desc: '适合认真追踪者', price: '$3.99', period: '/月', badge: '最受欢迎', features: ['无限拍照', 'AI 膳食推荐', '营养追踪', '个性化饮食计划', '邀请好友 —— 双方各得 7 天 Pro 免费', '无广告'], cta: '升级到专业版' },
     },
     cta: { title: '准备好拍下第一餐了吗？', subtitle: '加入 2,400+ 位正在用 SnapCalo 智能追踪的东南亚用户。', ctaPrimary: '免费试用', ctaSecondary: '了解更多' },
