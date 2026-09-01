@@ -13,7 +13,6 @@ import {
   CheckCircle2,
   Menu,
   X,
-  QrCode,
   Sparkles,
   ShieldCheck,
   ChevronDown,
@@ -21,9 +20,16 @@ import {
   Eye,
   Scale,
   Languages,
+  Barcode,
+  Bot,
+  Download,
+  Globe2,
 } from 'lucide-react'
 import { useI18n } from '../i18n/I18nContext'
 import { languages, type Language } from '../i18n/translations'
+import qrApk from '../assets/qr-apk.svg'
+
+const APK_URL = 'https://expo.dev/artifacts/eas/89z8k55to0-RmbCZ2dLvFcz-lAEBHTtEbrTUK5ZUB6A.apk'
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null)
@@ -65,10 +71,7 @@ function Navbar() {
     <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b border-emerald-100">
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-xl bg-emerald-500 flex items-center justify-center">
-            <Camera className="w-5 h-5 text-white" />
-          </div>
-          <span className="font-bold text-xl text-gray-900">SnapCalo</span>
+          <img src="/logo-main.png" alt="SnapCalo" className="h-8 w-auto" />
         </div>
 
         <div className="hidden md:flex items-center gap-6">
@@ -191,10 +194,7 @@ function Hero() {
                   <div className="px-5 pb-8 pt-2">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-lg bg-emerald-500 flex items-center justify-center">
-                          <Camera className="w-4 h-4 text-white" />
-                        </div>
-                        <span className="font-bold text-sm">SnapCalo</span>
+                        <img src="/logo-main.png" alt="SnapCalo" className="h-5 w-auto" />
                       </div>
                       <div className="w-8 h-8 rounded-full bg-emerald-100" />
                     </div>
@@ -291,6 +291,8 @@ function Features() {
     { icon: <Globe className="w-6 h-6 text-white" />, bg: 'bg-orange-500' },
     { icon: <TrendingUp className="w-6 h-6 text-white" />, bg: 'bg-blue-500' },
     { icon: <Brain className="w-6 h-6 text-white" />, bg: 'bg-purple-500' },
+    { icon: <Barcode className="w-6 h-6 text-white" />, bg: 'bg-rose-500' },
+    { icon: <Bot className="w-6 h-6 text-white" />, bg: 'bg-cyan-500' },
   ]
 
   return (
@@ -517,27 +519,41 @@ function QRDownload() {
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-10">
               <div className="bg-white rounded-2xl p-5 shadow-xl">
-                <div className="w-40 h-40 bg-gray-900 rounded-xl flex items-center justify-center">
-                  <QrCode className="w-28 h-28 text-white" />
-                </div>
+                <img src={qrApk} alt="SnapCalo Android APK download QR code" className="w-40 h-40 rounded-xl" />
                 <p className="text-gray-900 text-xs font-medium mt-3">{t.download.scan}</p>
               </div>
 
               <div className="flex flex-col gap-4">
-                <button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3.5 rounded-xl flex items-center gap-3 transition shadow-lg min-w-[240px]">
-                  <Smartphone className="w-7 h-7" />
+                <a href={APK_URL} className="bg-white hover:bg-emerald-50 text-gray-900 px-6 py-3.5 rounded-xl flex items-center gap-3 transition shadow-lg min-w-[240px]">
+                  <Download className="w-7 h-7 text-emerald-600" />
                   <div className="text-left">
-                    <p className="text-[10px] text-gray-400 leading-none">Download on the</p>
-                    <p className="text-sm font-bold leading-tight">{t.download.appStore}</p>
+                    <p className="text-[10px] text-gray-500 leading-none">{t.download.apk}</p>
+                    <p className="text-sm font-bold leading-tight">{t.download.apkSub}</p>
                   </div>
-                </button>
-                <button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3.5 rounded-xl flex items-center gap-3 transition shadow-lg min-w-[240px]">
-                  <Smartphone className="w-7 h-7" />
+                </a>
+                <a href="/engine" className="bg-emerald-400/20 hover:bg-emerald-400/30 border border-white/40 text-white px-6 py-3.5 rounded-xl flex items-center gap-3 transition min-w-[240px]">
+                  <Globe2 className="w-7 h-7" />
                   <div className="text-left">
-                    <p className="text-[10px] text-gray-400 leading-none">Get it on</p>
-                    <p className="text-sm font-bold leading-tight">{t.download.googlePlay}</p>
+                    <p className="text-[10px] text-emerald-100 leading-none">{t.download.webDemo}</p>
+                    <p className="text-sm font-bold leading-tight">{t.download.webDemoSub}</p>
                   </div>
-                </button>
+                </a>
+                <div className="flex gap-3">
+                  <div className="flex-1 bg-gray-900/80 text-white px-4 py-3 rounded-xl flex items-center gap-2.5 opacity-70 cursor-not-allowed min-w-[116px]">
+                    <Smartphone className="w-6 h-6 flex-shrink-0" />
+                    <div className="text-left">
+                      <p className="text-[9px] text-gray-400 leading-none">{t.download.appStore}</p>
+                      <p className="text-xs font-bold leading-tight">{t.download.comingSoon}</p>
+                    </div>
+                  </div>
+                  <div className="flex-1 bg-gray-900/80 text-white px-4 py-3 rounded-xl flex items-center gap-2.5 opacity-70 cursor-not-allowed min-w-[116px]">
+                    <Smartphone className="w-6 h-6 flex-shrink-0" />
+                    <div className="text-left">
+                      <p className="text-[9px] text-gray-400 leading-none">{t.download.googlePlay}</p>
+                      <p className="text-xs font-bold leading-tight">{t.download.comingSoon}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -634,10 +650,7 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center">
-                <Camera className="w-4 h-4 text-white" />
-              </div>
-              <span className="font-bold text-white">SnapCalo</span>
+              <img src="/logo-main.png" alt="SnapCalo" className="h-7 w-auto" />
             </div>
             <p className="text-sm">{t.footer.tagline}</p>
           </div>

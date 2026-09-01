@@ -19,7 +19,7 @@ export const translations: Record<Language, {
   foods: { title: string; subtitle: string }
   testimonials: { title: string; items: { quote: string; name: string; location: string }[] }
   faq: { title: string; items: { q: string; a: string }[] }
-  download: { title: string; subtitle: string; scan: string; appStore: string; googlePlay: string; tag1: string; tag2: string; tag3: string }
+  download: { title: string; subtitle: string; scan: string; apk: string; apkSub: string; webDemo: string; webDemoSub: string; appStore: string; googlePlay: string; comingSoon: string; tag1: string; tag2: string; tag3: string }
   pricing: { title: string; subtitle: string; free: { name: string; desc: string; price: string; period: string; features: string[]; cta: string }; pro: { name: string; desc: string; price: string; period: string; badge: string; features: string[]; cta: string } }
   cta: { title: string; subtitle: string; ctaPrimary: string; ctaSecondary: string }
   footer: { tagline: string; product: string; company: string; legal: string; copyright: string }
@@ -46,6 +46,8 @@ export const translations: Record<Language, {
         { title: 'Local Food Database', desc: 'Trained on 10,000+ Southeast Asian dishes. From Nasi Goreng to Bun Cha, we know your favorites.' },
         { title: 'Smart Goals', desc: 'Set daily calorie targets. Get personalized recommendations based on your activity level, age, and weight goals.' },
         { title: 'AI Learning', desc: 'The more you use it, the smarter it gets. Learns your eating patterns, portion sizes, and local restaurants.' },
+        { title: 'Barcode Scan', desc: 'Scan packaged food barcodes for instant nutrition facts — perfect for snacks, drinks, and grocery items.' },
+        { title: 'AI Coach', desc: 'Get a one-line smart tip after every meal, tuned to your goal. Like a nutritionist in your pocket.' },
       ],
     },
     howItWorks: {
@@ -79,7 +81,7 @@ export const translations: Record<Language, {
     faq: {
       title: 'Frequently Asked Questions',
       items: [
-        { q: 'Is SnapCalo free to use?', a: 'Yes! You can snap up to 5 meals per day for free. Upgrade to Pro for unlimited snaps and detailed macro tracking.' },
+        { q: 'Is SnapCalo free to use?', a: 'Yes! You can snap up to 3 meals per day for free. Upgrade to Pro for unlimited snaps and detailed macro tracking.' },
         { q: 'How accurate is the calorie estimation?', a: 'Our AI achieves approximately 95% accuracy for common Southeast Asian dishes. You can always adjust portion sizes manually.' },
         { q: 'Does it work for all types of food?', a: 'SnapCalo is specially trained on Southeast Asian cuisine. It also works well for Western, Japanese, Korean, and Chinese food.' },
         { q: 'Do I need to manually enter ingredients?', a: 'No! Just snap a photo and the AI does the rest. No typing, no searching.' },
@@ -88,10 +90,15 @@ export const translations: Record<Language, {
     },
     download: {
       title: 'Download SnapCalo Today',
-      subtitle: 'Scan the QR code with your phone camera to download the app. Available on iOS and Android.',
-      scan: 'Scan to Download',
+      subtitle: 'Scan the QR code or tap below to get the Android beta. iOS version coming soon.',
+      scan: 'Scan to Download APK',
+      apk: 'Android Beta',
+      apkSub: 'Download APK',
+      webDemo: 'Web Demo',
+      webDemoSub: 'Try in your browser',
       appStore: 'App Store',
       googlePlay: 'Google Play',
+      comingSoon: 'Coming soon',
       tag1: 'Free to download',
       tag2: 'No credit card required',
       tag3: 'Cancel anytime',
@@ -99,8 +106,8 @@ export const translations: Record<Language, {
     pricing: {
       title: 'Simple Pricing',
       subtitle: 'Start free. Upgrade when you are ready.',
-      free: { name: 'Free', desc: 'Perfect for getting started', price: '$0', period: '/month', features: ['5 snaps per day', 'Basic calorie tracking', 'Weekly reports', 'Ad-supported'], cta: 'Get Started' },
-      pro: { name: 'Pro', desc: 'For serious trackers', price: '$4.99', period: '/month', badge: 'MOST POPULAR', features: ['Unlimited snaps', 'AI meal recommendations', 'Macro tracking', 'Personalized diet plans', 'No ads', 'Export data'], cta: 'Upgrade to Pro' },
+      free: { name: 'Free', desc: 'Perfect for getting started', price: '$0', period: '/month', features: ['3 snaps per day', 'Basic calorie tracking', 'Weekly reports', 'Ad-supported'], cta: 'Get Started' },
+      pro: { name: 'Pro', desc: 'For serious trackers', price: '$4.99', period: '/month', badge: 'MOST POPULAR', features: ['Unlimited snaps', 'AI meal recommendations', 'Macro tracking', 'Personalized diet plans', 'Refer friends — earn RM5 credit each', 'No ads'], cta: 'Upgrade to Pro' },
     },
     cta: { title: 'Ready to Snap Your First Meal?', subtitle: 'Join 2,400+ Southeast Asians who are already tracking smarter with SnapCalo.', ctaPrimary: 'Try For Free', ctaSecondary: 'Learn More' },
     footer: { tagline: 'AI calorie tracking for Southeast Asian food.', product: 'Product', company: 'Company', legal: 'Legal', copyright: '2026 SnapCalo.ai. Made with love for Southeast Asia.' },
@@ -128,6 +135,8 @@ export const translations: Record<Language, {
         { title: 'Pangkalan Data Makanan Tempatan', desc: 'Dilatih dengan 10,000+ hidangan Asia Tenggara. Dari Nasi Goreng ke Bun Cha, kami kenal kegemaran anda.' },
         { title: 'Sasaran Pintar', desc: 'Tetapkan sasaran kalori harian. Dapatkan cadangan peribadi berdasarkan tahap aktiviti, umur, dan matlamat berat.' },
         { title: 'AI Belajar', desc: 'Lebih kerap anda menggunakannya, lebih pintar ia menjadi. Belajar corak makan, saiz hidangan, dan restoran tempatan anda.' },
+        { title: 'Imbas Kod Bar', desc: 'Imbas kod bar makanan bungkusan untuk fakta nutrisi segera — sesuai untuk snek, minuman, dan barangan runcit.' },
+        { title: 'Jurulatih AI', desc: 'Dapatkan tip pintar selepas setiap hidangan, disesuaikan dengan matlamat anda. Seperti pakar pemakanan di poket anda.' },
       ],
     },
     howItWorks: {
@@ -161,7 +170,7 @@ export const translations: Record<Language, {
     faq: {
       title: 'Soalan Lazim',
       items: [
-        { q: 'Adakah SnapCalo percuma?', a: 'Ya! Anda boleh snap sehingga 5 hidangan sehari secara percuma. Naik taraf ke Pro untuk snap tanpa had dan jejak makro terperinci.' },
+        { q: 'Adakah SnapCalo percuma?', a: 'Ya! Anda boleh snap sehingga 3 hidangan sehari secara percuma. Naik taraf ke Pro untuk snap tanpa had dan jejak makro terperinci.' },
         { q: 'Berapa tepat anggaran kalori?', a: 'AI kami mencapai ketepatan kira-kira 95% untuk hidangan Asia Tenggara biasa. Anda sentiasa boleh laraskan saiz hidangan secara manual.' },
         { q: 'Adakah ia berfungsi untuk semua jenis makanan?', a: 'SnapCalo dilatih khas untuk masakan Asia Tenggara. Ia juga berfungsi dengan baik untuk makanan Barat, Jepun, Korea, dan Cina.' },
         { q: 'Perlukah saya masukkan bahan secara manual?', a: 'Tidak! Hanya snap gambar dan AI akan melakukan yang lain. Tiada menaip, tiada mencari.' },
@@ -170,10 +179,15 @@ export const translations: Record<Language, {
     },
     download: {
       title: 'Muat Turun SnapCalo Hari Ini',
-      subtitle: 'Imbas kod QR dengan kamera telefon anda untuk memuat turun aplikasi. Tersedia di iOS dan Android.',
-      scan: 'Imbas untuk Muat Turun',
+      subtitle: 'Imbas kod QR atau tekan di bawah untuk dapatkan versi beta Android. Versi iOS akan datang.',
+      scan: 'Imbas untuk Muat Turun APK',
+      apk: 'Android Beta',
+      apkSub: 'Muat Turun APK',
+      webDemo: 'Demo Web',
+      webDemoSub: 'Cuba di pelayar anda',
       appStore: 'App Store',
       googlePlay: 'Google Play',
+      comingSoon: 'Akan datang',
       tag1: 'Percuma dimuat turun',
       tag2: 'Tiada kad kredit diperlukan',
       tag3: 'Batal bila-bila masa',
@@ -181,8 +195,8 @@ export const translations: Record<Language, {
     pricing: {
       title: 'Harga Mudah',
       subtitle: 'Mula percuma. Naik taraf apabila anda sedia.',
-      free: { name: 'Percuma', desc: 'Sempurna untuk permulaan', price: '$0', period: '/bulan', features: ['5 snap sehari', 'Jejak kalori asas', 'Laporan mingguan', 'Disokong iklan'], cta: 'Mula' },
-      pro: { name: 'Pro', desc: 'Untuk penjejak serius', price: '$4.99', period: '/bulan', badge: 'PALING POPULAR', features: ['Snap tanpa had', 'Cadangan makanan AI', 'Jejak makro', 'Pelan diet peribadi', 'Tiada iklan', 'Eksport data'], cta: 'Naik Taraf ke Pro' },
+      free: { name: 'Percuma', desc: 'Sempurna untuk permulaan', price: '$0', period: '/bulan', features: ['3 snap sehari', 'Jejak kalori asas', 'Laporan mingguan', 'Disokong iklan'], cta: 'Mula' },
+      pro: { name: 'Pro', desc: 'Untuk penjejak serius', price: '$4.99', period: '/bulan', badge: 'PALING POPULAR', features: ['Snap tanpa had', 'Cadangan makanan AI', 'Jejak makro', 'Pelan diet peribadi', 'Ajak rakan — dapat kredit RM5 setiap seorang', 'Tiada iklan'], cta: 'Naik Taraf ke Pro' },
     },
     cta: { title: 'Sedia untuk Snap Makanan Pertama Anda?', subtitle: 'Sertai 2,400+ rakyat Asia Tenggara yang sudah menjejak dengan bijak menggunakan SnapCalo.', ctaPrimary: 'Cuba Percuma', ctaSecondary: 'Ketahui Lebih Lanjut' },
     footer: { tagline: 'Penjejak kalori AI untuk makanan Asia Tenggara.', product: 'Produk', company: 'Syarikat', legal: 'Undang-undang', copyright: '2026 SnapCalo.ai. Dibuat dengan kasih sayang untuk Asia Tenggara.' },
@@ -210,6 +224,8 @@ export const translations: Record<Language, {
         { title: 'Database Makanan Lokal', desc: 'Dilatih dengan 10,000+ hidangan Asia Tenggara. Dari Nasi Goreng hingga Bun Cha, kami kenal favoritmu.' },
         { title: 'Target Pintar', desc: 'Tetapkan target kalori harian. Dapatkan rekomendasi pribadi berdasarkan tingkat aktivitas, usia, dan tujuan berat badan.' },
         { title: 'AI Belajar', desc: 'Semakin sering kamu menggunakannya, semakin pintar. Belajar pola makan, ukuran porsi, dan restoran lokalmu.' },
+        { title: 'Pindai Barcode', desc: 'Pindai barcode makanan kemasan untuk info nutrisi instan — cocok untuk camilan, minuman, dan belanjaan.' },
+        { title: 'Pelatih AI', desc: 'Dapatkan tips pintar setelah setiap makan, sesuai targetmu. Seperti ahli gizi di sakumu.' },
       ],
     },
     howItWorks: {
@@ -243,7 +259,7 @@ export const translations: Record<Language, {
     faq: {
       title: 'Pertanyaan yang Sering Diajukan',
       items: [
-        { q: 'Apakah SnapCalo gratis?', a: 'Ya! Kamu bisa foto hingga 5 hidangan per hari secara gratis. Upgrade ke Pro untuk foto tanpa batas dan pelacakan makro detail.' },
+        { q: 'Apakah SnapCalo gratis?', a: 'Ya! Kamu bisa foto hingga 3 hidangan per hari secara gratis. Upgrade ke Pro untuk foto tanpa batas dan pelacakan makro detail.' },
         { q: 'Seberapa akurat perkiraan kalori?', a: 'AI kami mencapai akurasi sekitar 95% untuk hidangan Asia Tenggara umum. Kamu selalu bisa menyesuaikan ukuran porsi secara manual.' },
         { q: 'Apakah berfungsi untuk semua jenis makanan?', a: 'SnapCalo dilatih khusus untuk masakan Asia Tenggara. Juga berfungsi baik untuk makanan Barat, Jepang, Korea, dan Cina.' },
         { q: 'Apakah saya perlu memasukkan bahan secara manual?', a: 'Tidak! Cukup foto dan AI akan melakukan sisanya. Tidak perlu mengetik, tidak perlu mencari.' },
@@ -252,10 +268,15 @@ export const translations: Record<Language, {
     },
     download: {
       title: 'Unduh SnapCalo Hari Ini',
-      subtitle: 'Pindai kode QR dengan kamera ponselmu untuk mengunduh aplikasi. Tersedia di iOS dan Android.',
-      scan: 'Pindai untuk Unduh',
+      subtitle: 'Pindai kode QR atau ketuk di bawah untuk mendapatkan beta Android. Versi iOS segera hadir.',
+      scan: 'Pindai untuk Unduh APK',
+      apk: 'Android Beta',
+      apkSub: 'Unduh APK',
+      webDemo: 'Demo Web',
+      webDemoSub: 'Coba di browser-mu',
       appStore: 'App Store',
       googlePlay: 'Google Play',
+      comingSoon: 'Segera hadir',
       tag1: 'Gratis diunduh',
       tag2: 'Tanpa kartu kredit',
       tag3: 'Batalkan kapan saja',
@@ -263,8 +284,8 @@ export const translations: Record<Language, {
     pricing: {
       title: 'Harga Sederhana',
       subtitle: 'Mulai gratis. Upgrade saat kamu siap.',
-      free: { name: 'Gratis', desc: 'Sempurna untuk memulai', price: '$0', period: '/bulan', features: ['5 foto per hari', 'Pelacakan kalori dasar', 'Laporan mingguan', 'Dengan iklan'], cta: 'Mulai' },
-      pro: { name: 'Pro', desc: 'Untuk pelacak serius', price: '$4.99', period: '/bulan', badge: 'PALING POPULER', features: ['Foto tanpa batas', 'Rekomendasi makanan AI', 'Pelacakan makro', 'Rencana diet pribadi', 'Tanpa iklan', 'Ekspor data'], cta: 'Upgrade ke Pro' },
+      free: { name: 'Gratis', desc: 'Sempurna untuk memulai', price: '$0', period: '/bulan', features: ['3 foto per hari', 'Pelacakan kalori dasar', 'Laporan mingguan', 'Dengan iklan'], cta: 'Mulai' },
+      pro: { name: 'Pro', desc: 'Untuk pelacak serius', price: '$4.99', period: '/bulan', badge: 'PALING POPULER', features: ['Foto tanpa batas', 'Rekomendasi makanan AI', 'Pelacakan makro', 'Rencana diet pribadi', 'Ajak teman — dapatkan kredit RM5 per orang', 'Tanpa iklan'], cta: 'Upgrade ke Pro' },
     },
     cta: { title: 'Siap Foto Makanan Pertamamu?', subtitle: 'Bergabung dengan 2,400+ orang Asia Tenggara yang sudah melacak dengan cerdas menggunakan SnapCalo.', ctaPrimary: 'Coba Gratis', ctaSecondary: 'Pelajari Lebih Lanjut' },
     footer: { tagline: 'Pelacak kalori AI untuk makanan Asia Tenggara.', product: 'Produk', company: 'Perusahaan', legal: 'Hukum', copyright: '2026 SnapCalo.ai. Dibuat dengan cinta untuk Asia Tenggara.' },
@@ -292,6 +313,8 @@ export const translations: Record<Language, {
         { title: 'Cơ sở dữ liệu món ăn địa phương', desc: 'Được đào tạo với 10,000+ món ăn Đông Nam Á. Từ Nasi Goreng đến Bún Chả, chúng tôi biết món yêu thích của bạn.' },
         { title: 'Mục tiêu thông minh', desc: 'Đặt mục tiêu calo hàng ngày. Nhận gợi ý cá nhân dựa trên mức độ hoạt động, tuổi và mục tiêu cân nặng.' },
         { title: 'AI học hỏi', desc: 'Càng dùng càng thông minh. Học thói quen ăn uống, khẩu phần và cả nhà hàng địa phương của bạn.' },
+        { title: 'Quét mã vạch', desc: 'Quét mã vạch thực phẩm đóng gói để xem thông tin dinh dưỡng ngay — hoàn hảo cho đồ ăn vặt và nước uống.' },
+        { title: 'Huấn luyện viên AI', desc: 'Nhận mẹo thông minh sau mỗi bữa ăn, phù hợp với mục tiêu của bạn. Như có chuyên gia dinh dưỡng trong túi.' },
       ],
     },
     howItWorks: {
@@ -325,7 +348,7 @@ export const translations: Record<Language, {
     faq: {
       title: 'Câu hỏi thường gặp',
       items: [
-        { q: 'SnapCalo có miễn phí không?', a: 'Có! Bạn có thể chụp tối đa 5 bữa ăn mỗi ngày miễn phí. Nâng cấp lên Pro để chụp không giới hạn và theo dõi dinh dưỡng chi tiết.' },
+        { q: 'SnapCalo có miễn phí không?', a: 'Có! Bạn có thể chụp tối đa 3 bữa ăn mỗi ngày miễn phí. Nâng cấp lên Pro để chụp không giới hạn và theo dõi dinh dưỡng chi tiết.' },
         { q: 'Độ chính xác của ước tính calo?', a: 'AI của chúng tôi đạt độ chính xác khoảng 95% cho các món ăn Đông Nam Á phổ biến. Bạn luôn có thể điều chỉnh khẩu phần thủ công.' },
         { q: 'Có hoạt động với tất cả loại thực phẩm không?', a: 'SnapCalo được đào tạo đặc biệt cho ẩm thực Đông Nam Á. Cũng hoạt động tốt với món Âu, Nhật, Hàn và Trung.' },
         { q: 'Tôi có cần nhập nguyên liệu thủ công không?', a: 'Không! Chỉ cần chụp ảnh và AI sẽ làm phần còn lại. Không cần gõ, không cần tìm kiếm.' },
@@ -334,10 +357,15 @@ export const translations: Record<Language, {
     },
     download: {
       title: 'Tải SnapCalo ngay hôm nay',
-      subtitle: 'Quét mã QR bằng camera điện thoại để tải ứng dụng. Có sẵn trên iOS và Android.',
-      scan: 'Quét để tải',
+      subtitle: 'Quét mã QR hoặc bấm bên dưới để tải bản beta Android. Phiên bản iOS sắp ra mắt.',
+      scan: 'Quét để tải APK',
+      apk: 'Android Beta',
+      apkSub: 'Tải APK',
+      webDemo: 'Bản demo Web',
+      webDemoSub: 'Dùng thử trên trình duyệt',
       appStore: 'App Store',
       googlePlay: 'Google Play',
+      comingSoon: 'Sắp ra mắt',
       tag1: 'Tải miễn phí',
       tag2: 'Không cần thẻ tín dụng',
       tag3: 'Hủy bất cứ lúc nào',
@@ -345,8 +373,8 @@ export const translations: Record<Language, {
     pricing: {
       title: 'Giá đơn giản',
       subtitle: 'Bắt đầu miễn phí. Nâng cấp khi bạn sẵn sàng.',
-      free: { name: 'Miễn phí', desc: 'Hoàn hảo để bắt đầu', price: '$0', period: '/tháng', features: ['5 lần chụp/ngày', 'Theo dõi calo cơ bản', 'Báo cáo hàng tuần', 'Có quảng cáo'], cta: 'Bắt đầu' },
-      pro: { name: 'Pro', desc: 'Dành cho người nghiêm túc', price: '$4.99', period: '/tháng', badge: 'PHỔ BIẾN NHẤT', features: ['Chụp không giới hạn', 'Gợi ý món ăn AI', 'Theo dõi dinh dưỡng', 'Kế hoạch ăn uống cá nhân', 'Không quảng cáo', 'Xuất dữ liệu'], cta: 'Nâng cấp Pro' },
+      free: { name: 'Miễn phí', desc: 'Hoàn hảo để bắt đầu', price: '$0', period: '/tháng', features: ['3 lần chụp/ngày', 'Theo dõi calo cơ bản', 'Báo cáo hàng tuần', 'Có quảng cáo'], cta: 'Bắt đầu' },
+      pro: { name: 'Pro', desc: 'Dành cho người nghiêm túc', price: '$4.99', period: '/tháng', badge: 'PHỔ BIẾN NHẤT', features: ['Chụp không giới hạn', 'Gợi ý món ăn AI', 'Theo dõi dinh dưỡng', 'Kế hoạch ăn uống cá nhân', 'Mời bạn bè — nhận RM5 cho mỗi người', 'Không quảng cáo'], cta: 'Nâng cấp Pro' },
     },
     cta: { title: 'Sẵn sàng chụp món ăn đầu tiên?', subtitle: 'Tham gia cùng 2,400+ người Đông Nam Á đang theo dõi thông minh hơn với SnapCalo.', ctaPrimary: 'Dùng thử miễn phí', ctaSecondary: 'Tìm hiểu thêm' },
     footer: { tagline: 'Trình theo dõi calo AI cho món ăn Đông Nam Á.', product: 'Sản phẩm', company: 'Công ty', legal: 'Pháp lý', copyright: '2026 SnapCalo.ai. Được tạo ra với tình yêu dành cho Đông Nam Á.' },
@@ -374,6 +402,8 @@ export const translations: Record<Language, {
         { title: 'ฐานข้อมูลอาหารท้องถิ่น', desc: 'ฝึกฝนด้วยเมนูเอเชียตะวันออกเฉียงใต้กว่า 10,000 จาน จากนาซิโกเร็งถึงบุญฉา เรารู้จักเมนูโปรดของคุณ' },
         { title: 'เป้าหมายอัจฉริยะ', desc: 'ตั้งเป้าหมายแคลอรีรายวัน รับคำแนะนำส่วนตัวตามระดับกิจกรรม อายุ และเป้าหมายน้ำหนัก' },
         { title: 'AI เรียนรู้', desc: 'ยิ่งใช้ยิ่งฉลาด เรียนรู้พฤติกรรมการกิน ปริมาณอาหาร และร้านอาหารท้องถิ่นของคุณ' },
+        { title: 'สแกนบาร์โค้ด', desc: 'สแกนบาร์โค้ดอาหารบรรจุภัณฑ์เพื่อดูข้อมูลโภชนาการทันที — เหมาะสำหรับขนม เครื่องดื่ม และของจากร้าน' },
+        { title: 'โค้ช AI', desc: 'รับเคล็ดลับอัจฉริยะหลังทุกมื้อ ตรงตามเป้าหมายของคุณ เหมือนมีนักโภชนาการอยู่ในกระเป๋า' },
       ],
     },
     howItWorks: {
@@ -407,7 +437,7 @@ export const translations: Record<Language, {
     faq: {
       title: 'คำถามที่พบบ่อย',
       items: [
-        { q: 'SnapCalo ใช้ฟรีไหม?', a: 'ใช่! คุณถ่ายอาหารได้สูงสุด 5 มื้อต่อวันฟรี อัปเกรดเป็น Pro เพื่อถ่ายไม่จำกัดและติดตามสารอาหารแบบละเอียด' },
+        { q: 'SnapCalo ใช้ฟรีไหม?', a: 'ใช่! คุณถ่ายอาหารได้สูงสุด 3 มื้อต่อวันฟรี อัปเกรดเป็น Pro เพื่อถ่ายไม่จำกัดและติดตามสารอาหารแบบละเอียด' },
         { q: 'การประมาณแคลอรีแม่นยำแค่ไหน?', a: 'AI ของเรามีความแม่นยำประมาณ 95% สำหรับอาหารเอเชียตะวันออกเฉียงใต้ทั่วไป คุณสามารถปรับปริมาณอาหารเองได้เสมอ' },
         { q: 'ใช้ได้กับอาหารทุกประเภทไหม?', a: 'SnapCalo ถูกฝึกฝนเป็นพิเศษสำหรับอาหารเอเชียตะวันออกเฉียงใต้ ใช้ได้ดีกับอาหารตะวันตก ญี่ปุ่น เกาหลี และจีน' },
         { q: 'ต้องกรอกวัตถุดิบเองไหม?', a: 'ไม่! แค่ถ่ายรูปแล้ว AI จะจัดการให้ ไม่ต้องพิมพ์ ไม่ต้องค้นหา' },
@@ -416,10 +446,15 @@ export const translations: Record<Language, {
     },
     download: {
       title: 'ดาวน์โหลด SnapCalo วันนี้',
-      subtitle: 'สแกน QR โค้ดด้วยกล้องโทรศัพท์เพื่อดาวน์โหลดแอป ใช้ได้บน iOS และ Android',
-      scan: 'สแกนเพื่อดาวน์โหลด',
+      subtitle: 'สแกน QR โค้ดหรือแตะด้านล่างเพื่อรับเวอร์ชันเบต้าสำหรับ Android เวอร์ชัน iOS เร็วๆ นี้',
+      scan: 'สแกนเพื่อดาวน์โหลด APK',
+      apk: 'Android Beta',
+      apkSub: 'ดาวน์โหลด APK',
+      webDemo: 'เดโมเว็บ',
+      webDemoSub: 'ลองใช้ในเบราว์เซอร์',
       appStore: 'App Store',
       googlePlay: 'Google Play',
+      comingSoon: 'เร็วๆ นี้',
       tag1: 'ดาวน์โหลดฟรี',
       tag2: 'ไม่ต้องใช้บัตรเครดิต',
       tag3: 'ยกเลิกได้ตลอดเวลา',
@@ -427,8 +462,8 @@ export const translations: Record<Language, {
     pricing: {
       title: 'ราคาง่ายๆ',
       subtitle: 'เริ่มต้นฟรี อัปเกรดเมื่อคุณพร้อม',
-      free: { name: 'ฟรี', desc: 'เหมาะสำหรับเริ่มต้น', price: '$0', period: '/เดือน', features: ['ถ่าย 5 ครั้ง/วัน', 'ติดตามแคลอรีพื้นฐาน', 'รายงานรายสัปดาห์', 'มีโฆษณา'], cta: 'เริ่มต้น' },
-      pro: { name: 'Pro', desc: 'สำหรับคนจริงจัง', price: '$4.99', period: '/เดือน', badge: 'ยอดนิยมที่สุด', features: ['ถ่ายไม่จำกัด', 'แนะนำอาหาร AI', 'ติดตามสารอาหาร', 'แผนอาหารส่วนตัว', 'ไม่มีโฆษณา', 'ส่งออกข้อมูล'], cta: 'อัปเกรดเป็น Pro' },
+      free: { name: 'ฟรี', desc: 'เหมาะสำหรับเริ่มต้น', price: '$0', period: '/เดือน', features: ['ถ่าย 3 ครั้ง/วัน', 'ติดตามแคลอรีพื้นฐาน', 'รายงานรายสัปดาห์', 'มีโฆษณา'], cta: 'เริ่มต้น' },
+      pro: { name: 'Pro', desc: 'สำหรับคนจริงจัง', price: '$4.99', period: '/เดือน', badge: 'ยอดนิยมที่สุด', features: ['ถ่ายไม่จำกัด', 'แนะนำอาหาร AI', 'ติดตามสารอาหาร', 'แผนอาหารส่วนตัว', 'ชวนเพื่อน — รับเครดิต RM5 ต่อคน', 'ไม่มีโฆษณา'], cta: 'อัปเกรดเป็น Pro' },
     },
     cta: { title: 'พร้อมถ่ายมื้อแรกของคุณ?', subtitle: 'เข้าร่วมกับ 2,400+ คนเอเชียตะวันออกเฉียงใต้ที่ติดตามแคลอรีอย่างชาญฉลาดด้วย SnapCalo', ctaPrimary: 'ทดลองฟรี', ctaSecondary: 'เรียนรู้เพิ่มเติม' },
     footer: { tagline: 'เครื่องมือติดตามแคลอรี AI สำหรับอาหารเอเชียตะวันออกเฉียงใต้', product: 'ผลิตภัณฑ์', company: 'บริษัท', legal: 'กฎหมาย', copyright: '2026 SnapCalo.ai. สร้างด้วยความรักสำหรับเอเชียตะวันออกเฉียงใต้' },
@@ -456,6 +491,8 @@ export const translations: Record<Language, {
         { title: '本地美食数据库', desc: '基于 10,000+ 道东南亚菜品训练。从印尼炒饭到越南烤肉粉，我们懂你的最爱。' },
         { title: '智能目标', desc: '设定每日卡路里目标。根据你的活动量、年龄和体重目标提供个性化建议。' },
         { title: 'AI 自学习', desc: '用得越多越聪明。学习你的饮食习惯、份量大小，甚至你常去的本地餐厅。' },
+        { title: '条形码扫描', desc: '扫描包装食品条形码，即刻获取营养成分 —— 零食、饮料、超市商品都能记。' },
+        { title: 'AI 教练', desc: '每餐后给出一句贴合你目标的智能建议，就像口袋里有一位营养师。' },
       ],
     },
     howItWorks: {
@@ -489,7 +526,7 @@ export const translations: Record<Language, {
     faq: {
       title: '常见问题',
       items: [
-        { q: 'SnapCalo 是免费的吗？', a: '是的！每天可以免费拍 5 餐。升级到 Pro 享受无限拍照和详细营养追踪。' },
+        { q: 'SnapCalo 是免费的吗？', a: '是的！每天可以免费拍 3 餐。升级到 Pro 享受无限拍照和详细营养追踪。' },
         { q: '卡路里估算有多准确？', a: '我们的 AI 对常见东南亚菜品的准确度约为 95%。你也可以随时手动调整份量。' },
         { q: '适用于所有类型的食物吗？', a: 'SnapCalo 专门针对东南亚美食训练。对西餐、日料、韩餐和中餐也同样适用。' },
         { q: '需要手动输入食材吗？', a: '不需要！只需拍一张照片，AI 自动完成。无需打字，无需搜索。' },
@@ -498,10 +535,15 @@ export const translations: Record<Language, {
     },
     download: {
       title: '立即下载 SnapCalo',
-      subtitle: '用手机相机扫描二维码即可下载应用。支持 iOS 和 Android。',
-      scan: '扫码下载',
+      subtitle: '扫描二维码或点击下方按钮，立即下载 Android 测试版。iOS 版即将推出。',
+      scan: '扫码下载 APK',
+      apk: 'Android 测试版',
+      apkSub: '直接下载 APK',
+      webDemo: '网页版 Demo',
+      webDemoSub: '免安装，浏览器直接试',
       appStore: 'App Store',
       googlePlay: 'Google Play',
+      comingSoon: '敬请期待',
       tag1: '免费下载',
       tag2: '无需信用卡',
       tag3: '随时取消',
@@ -509,8 +551,8 @@ export const translations: Record<Language, {
     pricing: {
       title: '简单定价',
       subtitle: '免费开始。准备好了再升级。',
-      free: { name: '免费版', desc: '适合初次体验', price: '¥0', period: '/月', features: ['每天 5 次拍照', '基础卡路里追踪', '每周报告', '含广告'], cta: '开始使用' },
-      pro: { name: '专业版', desc: '适合认真追踪者', price: '$4.99', period: '/月', badge: '最受欢迎', features: ['无限拍照', 'AI 膳食推荐', '营养追踪', '个性化饮食计划', '无广告', '导出数据'], cta: '升级到专业版' },
+      free: { name: '免费版', desc: '适合初次体验', price: '¥0', period: '/月', features: ['每天 3 次拍照', '基础卡路里追踪', '每周报告', '含广告'], cta: '开始使用' },
+      pro: { name: '专业版', desc: '适合认真追踪者', price: '$4.99', period: '/月', badge: '最受欢迎', features: ['无限拍照', 'AI 膳食推荐', '营养追踪', '个性化饮食计划', '邀请好友 —— 每位返 RM5 奖励', '无广告'], cta: '升级到专业版' },
     },
     cta: { title: '准备好拍下第一餐了吗？', subtitle: '加入 2,400+ 位正在用 SnapCalo 智能追踪的东南亚用户。', ctaPrimary: '免费试用', ctaSecondary: '了解更多' },
     footer: { tagline: '专为东南亚美食打造的 AI 卡路里追踪器。', product: '产品', company: '公司', legal: '法律', copyright: '2026 SnapCalo.ai. 为东南亚用心打造。' },
