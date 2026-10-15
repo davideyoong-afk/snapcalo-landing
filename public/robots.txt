@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /delete-account
+
+Sitemap: https://snapcalo.me/sitemap.xml
