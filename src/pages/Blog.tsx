@@ -19,7 +19,7 @@ export default function Blog() {
       <header className="border-b border-white/5">
         <div className="max-w-5xl mx-auto px-4 py-5 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src="/logo-main.png?v=2" alt="SnapCalo" className="h-8 w-auto" />
+            <img src="/logo-dark.png?v=3" alt="SnapCalo" className="h-8 w-auto" />
           </Link>
           <div className="flex items-center gap-3">
             <div className="relative group">
