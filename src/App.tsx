@@ -4,6 +4,7 @@ import Engine from './pages/Engine'
 import Screens from './pages/Screens'
 import Privacy from './pages/Privacy'
 import DeleteAccount from './pages/DeleteAccount'
+import Faq from './pages/Faq'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import { I18nProvider } from './i18n/I18nContext'
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/delete-account" element={<DeleteAccount />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/faq" element={<Faq />} />
       </Routes>
     </I18nProvider>
   )

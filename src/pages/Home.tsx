@@ -78,6 +78,7 @@ function Navbar() {
           <a href="#accuracy" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.accuracy}</a>
           <a href="#foods" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.foods}</a>
           <a href="/blog" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.blog}</a>
+          <a href="/faq" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">FAQ</a>
 
           <div className="relative" ref={langRef}>
             <button
@@ -122,6 +123,7 @@ function Navbar() {
           <a href="#accuracy" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.accuracy}</a>
           <a href="#foods" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.foods}</a>
           <a href="/blog" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.blog}</a>
+          <a href="/faq" onClick={() => setMenuOpen(false)} className="block text-stone-300">FAQ</a>
           <div className="pt-2 border-t border-white/[0.06]">
             <p className="text-xs text-stone-500 mb-2">Language / Bahasa</p>
             <div className="grid grid-cols-3 gap-2">
@@ -793,6 +795,7 @@ function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-emerald-400 transition">About</a></li>
               <li><a href="/blog" className="hover:text-emerald-400 transition">Blog</a></li>
+              <li><a href="/faq" className="hover:text-emerald-400 transition">FAQ</a></li>
               <li><a href="https://www.tiktok.com/@snapcalo.me" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition">TikTok @snapcalo.me</a></li>
               <li><a href="https://www.facebook.com/profile.php?id=61594966703226" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition">Facebook Calo Snap</a></li>
             </ul>
