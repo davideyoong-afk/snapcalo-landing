@@ -62,7 +62,7 @@ export default function Faq() {
       <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b border-emerald-100">
         <div className="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2">
-            <img src="/logo-main.png?v=3" alt="SnapCalo" className="h-8 w-auto" />
+            <img src="/logo-main.png?v=4" alt="SnapCalo" className="h-11 w-auto" />
           </a>
           <a href="/" className="text-sm text-emerald-600 hover:underline">← Back to home</a>
         </div>

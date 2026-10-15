@@ -86,7 +86,7 @@ export default function BlogPost() {
       <header className="border-b border-white/5">
         <div className="max-w-3xl mx-auto px-4 py-5 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src="/logo-dark.png?v=3" alt="SnapCalo" className="h-8 w-auto" />
+            <img src="/logo-dark.png?v=4" alt="SnapCalo" className="h-11 w-auto" />
           </Link>
           <Link to="/blog" className="flex items-center gap-2 text-sm text-stone-400 hover:text-emerald-400 transition">
             <ArrowLeft className="w-4 h-4" /> {ui.allArticles}

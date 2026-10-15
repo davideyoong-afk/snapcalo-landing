@@ -69,7 +69,7 @@ function Navbar() {
     <nav className="sticky top-0 z-50 backdrop-blur-xl bg-[#04090c]/80 border-b border-white/[0.06]">
       <div className="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src="/logo-dark.png?v=3" alt="SnapCalo" className="h-11 w-auto rounded-lg" />
+          <img src="/logo-dark.png?v=4" alt="SnapCalo" className="h-16 w-auto rounded-lg" />
         </div>
 
         <div className="hidden md:flex items-center gap-7">
@@ -778,7 +778,7 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/logo-dark.png?v=3" alt="SnapCalo" className="h-9 w-auto rounded-lg" />
+              <img src="/logo-dark.png?v=4" alt="SnapCalo" className="h-[52px] w-auto rounded-lg" />
             </div>
             <p className="text-sm">{t.footer.tagline}</p>
             <a href="mailto:support@snapcalo.me" className="inline-block mt-3 text-sm text-emerald-400 hover:text-emerald-300 transition">support@snapcalo.me</a>
