@@ -14,7 +14,7 @@ export default function DeleteAccount() {
       <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b border-emerald-100">
         <div className="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2">
-            <img src="/logo-main.png" alt="SnapCalo" className="h-8 w-auto" />
+            <img src="/logo-main.png?v=2" alt="SnapCalo" className="h-8 w-auto" />
           </a>
           <a href="/" className="text-sm text-emerald-600 hover:underline">← Back to home</a>
         </div>
@@ -81,7 +81,7 @@ export default function DeleteAccount() {
       </main>
 
       <footer className="bg-gray-950 text-gray-500 py-8 text-center text-sm">
-        2026 SnapCalo.ai · Made with love for Southeast Asia
+        2026 SnapCalo · Made with love for Southeast Asia
       </footer>
     </div>
   )

@@ -1,0 +1,235 @@
+export type Block =
+  | { type: 'p'; text: string }
+  | { type: 'h2'; text: string }
+  | { type: 'list'; items: string[] }
+  | { type: 'table'; head: string[]; rows: string[][] }
+
+export interface Post {
+  slug: string
+  title: string
+  excerpt: string
+  date: string
+  readMinutes: number
+  tag: string
+  emoji: string
+  /** 博客封面横幅,放在 /public/blog/ 下 */
+  image: string
+  blocks: Block[]
+}
+
+export const posts: Post[] = [
+  {
+    slug: 'kopitiam-drinks-calories',
+    title: "Teh Tarik, Kopi O & Milo Dinosaur Calories: The Kopitiam Drinks Quietly Making Us Fat",
+    excerpt: "You can eat carefully all day and still gain weight — because of what you drank. Here are the real calories in Malaysia's favourite kopitiam drinks, and the easy orders that save you hundreds of kcal.",
+    date: '2026-10-01',
+    readMinutes: 4,
+    tag: 'Food Guide',
+    emoji: '☕',
+    image: '/blog/banner-kopitiam-drinks.jpg',
+    blocks: [
+      { type: 'p', text: "Ever heard someone say \"I barely eat anything, but I keep gaining weight\"? Very often the answer is not on the plate — it's in the glass. Drinks don't feel like food, but two teh tarik a day quietly adds up to about **1 kg of extra weight every month**. Let's look at the real numbers." },
+      { type: 'h2', text: 'Kopitiam drinks, ranked by calories' },
+      { type: 'table', head: ['Drink', 'Typical order', 'Est. calories'], rows: [
+        ['Kopi O kosong (black, no sugar)', '1 glass', '~5 kcal'],
+        ['Teh O kosong', '1 glass', '~5 kcal'],
+        ['Kopi O with sugar', '1 glass', '~45 kcal'],
+        ['Kopi (with condensed milk)', '1 glass', '~120 kcal'],
+        ['Teh tarik', '1 glass', '~150 kcal'],
+        ['Nescafe tarik', '1 glass', '~155 kcal'],
+        ['Teh ais', '1 glass', '~160 kcal'],
+        ['White coffee (3-in-1)', '1 packet', '~150 kcal'],
+        ['Milo ais', '1 glass', '~200 kcal'],
+        ['Sirap bandung', '1 glass', '~220 kcal'],
+        ['Milo dinosaur', '1 glass', '~400 kcal'],
+        ['Boba milk tea', '1 medium cup', '~400 kcal'],
+      ]},
+      { type: 'p', text: 'Notice the pattern: the danger is not the tea or coffee itself — those are nearly zero. It is the **condensed milk, evaporated milk, sugar syrup and toppings** that pile on the calories. A Milo dinosaur has roughly the same calories as a full plate of chicken rice.' },
+      { type: 'h2', text: 'Why drinks slip past your diet' },
+      { type: 'p', text: 'Liquid calories barely make you feel full. Your brain registers a plate of rice as a meal, but a glass of teh tarik as "just a drink". So the 150 kcal from your morning teh tarik never replaces anything — it simply gets added on top of everything you eat.' },
+      { type: 'p', text: 'And the sugar load is real: one teh tarik carries about **5–6 teaspoons of sugar**, already hitting the daily limit recommended by KKM — before you have eaten a single bite.' },
+      { type: 'h2', text: '6 easy orders that save hundreds of kcal' },
+      { type: 'list', items: [
+        'Say "**kurang manis**" (less sweet) — most stalls cut the sugar by half',
+        'Switch teh tarik → **teh O ais limau**: ~20 kcal, still refreshing',
+        'Switch kopi → **kopi O kosong**: from ~120 to ~5 kcal',
+        'Order "**siew siew manis**" (a little sweet) if kosong is too hardcore',
+        'Milo dinosaur → plain **Milo ais**: instantly saves ~200 kcal',
+        'Boba with friends? Share one, or pick the smallest cup with less sugar',
+      ]},
+      { type: 'h2', text: 'Snap your drink too' },
+      { type: 'p', text: 'You don\'t need to memorise this table. **SnapCalo** recognises drinks from a photo too — snap your teh tarik or kopi and the AI estimates the calories, so the "invisible" calories finally become visible. Small change, big difference over a month.' },
+    ],
+  },
+  {
+    slug: 'nasi-lemak-calories',
+    title: "Nasi Lemak Calories: What's Really in Malaysia's Favourite Breakfast?",
+    excerpt: 'A plate of nasi lemak can run from 400 to over 800 kcal depending on what goes on it. Here is the component-by-component breakdown — and how to enjoy it without blowing your daily budget.',
+    date: '2026-09-07',
+    readMinutes: 4,
+    tag: 'Food Guide',
+    emoji: '🍚',
+    image: '/blog/banner-nasi-lemak.jpg',
+    blocks: [
+      { type: 'p', text: "Nasi lemak is Malaysia on a plate: fragrant coconut rice, spicy sambal, crunchy anchovies, peanuts, cucumber and egg. It is also famously hard to count — because nobody assembles it the same way twice. Let's break it down." },
+      { type: 'h2', text: 'Calorie breakdown, component by component' },
+      { type: 'table', head: ['Component', 'Typical serving', 'Calories'], rows: [
+        ['Coconut rice', '1 cup (~150 g)', '~250 kcal'],
+        ['Sambal', '2 tbsp', '~80 kcal'],
+        ['Fried egg', '1 egg', '~90 kcal'],
+        ['Ikan bilis (anchovies)', '1 tbsp', '~35 kcal'],
+        ['Peanuts', '1 tbsp', '~50 kcal'],
+        ['Cucumber slices', '4–5 slices', '~5 kcal'],
+        ['Classic plate subtotal', '', '~510 kcal'],
+        ['+ Fried chicken (ayam goreng)', '1 piece', '+290 kcal'],
+        ['+ Chicken rendang', '1 serving', '+250 kcal'],
+        ['+ Sambal sotong (squid)', '1 serving', '+150 kcal'],
+      ]},
+      { type: 'p', text: 'So a humble basic plate sits around **500 kcal**, but add a piece of ayam goreng and you are suddenly looking at **800 kcal** — nearly half of many people\'s daily target.' },
+      { type: 'h2', text: 'Why the range is so wide' },
+      { type: 'p', text: 'Three things swing the number: the rice portion (a generous scoop can add 100+ kcal), how much oil went into the sambal, and the add-ons. The sambal and coconut rice carry most of the hidden fat, not the toppings you can see.' },
+      { type: 'h2', text: '5 ways to lighten your nasi lemak' },
+      { type: 'list', items: [
+        'Ask for "nasi separuh" (half rice) — most stalls will do it',
+        'Choose boiled egg (telur rebus) over fried',
+        'Go easy on extra sambal — a spoonful is flavour, three is a meal',
+        'Load up on cucumber; ask for extra if they let you',
+        'Share the fried chicken, or save it for your treat day',
+      ]},
+      { type: 'h2', text: 'Track it in seconds' },
+      { type: 'p', text: 'No need to memorise this table. Snap a photo of your actual plate with **SnapCalo**, and the AI estimates the calories and macros for what is really in front of you — then you can adjust the portion with one tap.' },
+    ],
+  },
+  {
+    slug: 'sea-food-calories-ranked',
+    title: '10 Beloved Southeast Asian Dishes, Ranked by Calories',
+    excerpt: 'From Tom Yum to Char Kway Teow — see where your favourite dishes land on the calorie ladder, and learn the simple patterns that make some dishes far lighter than others.',
+    date: '2026-09-07',
+    readMinutes: 5,
+    tag: 'Rankings',
+    emoji: '🏆',
+    image: '/blog/banner-sea-ranked.jpg',
+    blocks: [
+      { type: 'p', text: 'Ever wondered how your favourite hawker dishes stack up? We ranked 10 of Southeast Asia\'s most loved dishes by estimated calories per typical serving. Numbers are approximations — every stall has its own hand — but the pattern is clear.' },
+      { type: 'table', head: ['Dish', 'Country', 'Typical serving', 'Est. calories'], rows: [
+        ['Tom Yum Goong', '🇹🇭 Thailand', '1 bowl', '~180 kcal'],
+        ['Satay (5 sticks + sauce)', '🇲🇾 Malaysia', '5 sticks', '~400 kcal'],
+        ['Pho Bo (beef noodle soup)', '🇻🇳 Vietnam', '1 bowl', '~420 kcal'],
+        ['Banh Mi', '🇻🇳 Vietnam', '1 sandwich', '~450 kcal'],
+        ['Nasi Lemak (classic)', '🇲🇾 Malaysia', '1 plate', '~510 kcal'],
+        ['Hainanese Chicken Rice', '🇸🇬 Singapore', '1 plate', '~600 kcal'],
+        ['Nasi Goreng', '🇮🇩 Indonesia', '1 plate', '~620 kcal'],
+        ['Beef Rendang + rice', '🇮🇩 Indonesia', '1 serving', '~680 kcal'],
+        ['Char Kway Teow', '🇲🇾 Malaysia', '1 plate', '~740 kcal'],
+        ['Pad Thai', '🇹🇭 Thailand', '1 plate', '~760 kcal'],
+      ]},
+      { type: 'h2', text: 'What the numbers don\'t tell you' },
+      { type: 'p', text: 'Notice the pattern: **soups are light, fried noodles are heavy**. Clear broths like tom yum and pho fill you up with mostly water and protein. Char kway teow and pad thai soak up oil in the wok, and the noodles themselves are pure refined carb. Coconut milk (rendang, nasi lemak) sits in the middle — rich, but satisfying in smaller portions.' },
+      { type: 'h2', text: 'Lighter picks that still satisfy' },
+      { type: 'list', items: [
+        'Craving noodles? Pho delivers the same comfort for roughly half the calories of pad thai',
+        'Want something spicy? Tom yum is the lowest-calorie flavour bomb on the list',
+        'Love nasi lemak? Keep it classic and skip the add-ons — see our full nasi lemak breakdown',
+        'Sharing is a legitimate strategy: split a char kway teow and add a soup',
+      ]},
+      { type: 'p', text: 'The goal isn\'t to ban your favourites — it\'s to **know the numbers** so you can plan the rest of your day around them. That\'s exactly what SnapCalo does with one photo.' },
+    ],
+  },
+  {
+    slug: 'suku-suku-separuh-guide',
+    title: "Suku Suku Separuh: Malaysia's 'Quarter Quarter Half' Plate Method, Explained",
+    excerpt: "The Malaysian Ministry of Health's simple plate rule — half vegetables, a quarter protein, a quarter carbs — might be the easiest healthy-eating habit you'll ever learn. Here's how to actually use it.",
+    date: '2026-09-07',
+    readMinutes: 4,
+    tag: 'Healthy Eating',
+    emoji: '🍽️',
+    image: '/blog/banner-suku-suku.jpg',
+    blocks: [
+      { type: 'p', text: '**Suku Suku Separuh** (literally "quarter quarter half") is the Malaysian Ministry of Health\'s official healthy-plate guide. No apps, no counting, no weighing — just look at your plate and divide it.' },
+      { type: 'h2', text: 'The rule, in one breath' },
+      { type: 'list', items: [
+        '½ of your plate: vegetables and fruits (sayur-sayuran dan buah-buahan)',
+        '¼ of your plate: protein — fish, chicken, eggs, tofu, tempeh (protein)',
+        '¼ of your plate: carbohydrates — rice, noodles, bread (karbohidrat)',
+      ]},
+      { type: 'h2', text: 'Why it works when diets fail' },
+      { type: 'p', text: 'Most diets fail because they demand precision forever. Suku suku separuh demands only **proportion**. Half a plate of vegetables fills your stomach with fibre and water, so you naturally eat less of the calorie-dense stuff — without ever feeling deprived. It also works at a mamak, a warung, or your own kitchen. No special food required.' },
+      { type: 'h2', text: 'Real life: applying it to Malaysian food' },
+      { type: 'list', items: [
+        '**Economy rice (nasi campur):** the easiest place to do this — pick 2 vegetable dishes, 1 protein, half rice',
+        '**Nasi lemak:** the classic plate is nearly all carb — add a side of ulam or sayur and halve the rice',
+        '**Mee goreng:** treat the noodles as your ¼ carb, add extra taugeh and a boiled egg, skip the fritters',
+        '**Banana leaf rice:** load up on the vegetable sides first — they are refillable for a reason',
+      ]},
+      { type: 'h2', text: 'Combine it with calorie awareness' },
+      { type: 'p', text: 'The plate method controls **what** you eat; calories control **how much**. Together they are unbeatable: build your plate by the suku suku separuh rule, then snap it with **SnapCalo** to see the numbers. After a week you will start recognising a "good plate" on sight — which is the whole point.' },
+    ],
+  },
+  {
+    slug: 'how-ai-calorie-tracking-works',
+    title: 'How AI Calorie Tracking From a Photo Actually Works',
+    excerpt: 'No typing, no searching food databases, no guessing. Here is the four-step pipeline that turns a photo of your meal into calories and macros — and an honest look at its accuracy.',
+    date: '2026-09-07',
+    readMinutes: 4,
+    tag: 'Technology',
+    emoji: '📸',
+    image: '/blog/banner-ai-tracking.jpg',
+    blocks: [
+      { type: 'p', text: 'Traditional calorie apps ask you to search a database, pick an entry, guess the grams, and repeat for every item on the plate. Most people quit within two weeks. Photo-based tracking flips the work: you take one picture, and the machine does the tedious part. Here is what happens in the few seconds after you press the shutter.' },
+      { type: 'h2', text: 'Step 1: Dish recognition' },
+      { type: 'p', text: 'A vision AI model looks at your photo and identifies the dish — not just "rice" but **nasi lemak**, not just "noodles" but **pad thai**. SnapCalo\'s recognition is tuned specifically for Southeast Asian food, the dishes that generic Western apps consistently get wrong.' },
+      { type: 'h2', text: 'Step 2: Portion estimation' },
+      { type: 'p', text: 'Calories live in the grams. The AI estimates the serving size from visual cues — plate size, food volume, how full the bowl is. This is the hardest part of the whole pipeline, which is why SnapCalo always lets you adjust the portion with one tap before saving.' },
+      { type: 'h2', text: 'Step 3: Nutrition databases' },
+      { type: 'p', text: 'The recognised dish and estimated grams are matched against reference nutrition data — including the **Malaysian Food Composition Database (MyFCD)** and **USDA FoodData Central** — to compute calories, protein, carbohydrates and fat.' },
+      { type: 'h2', text: 'Step 4: Your daily picture' },
+      { type: 'p', text: 'The meal is added to your day instantly, against your personal calorie target (calculated from your height, weight, age and goal). One glance tells you how much room is left for dinner.' },
+      { type: 'h2', text: 'Honestly, how accurate is it?' },
+      { type: 'p', text: 'For common Southeast Asian dishes, photo estimation typically lands within **±10–20%** of a careful manual entry — about as accurate as most people\'s manual logging, but done in three seconds instead of three minutes. For packaged food, scanning the **barcode** is even better: it reads the nutrition label directly. The goal was never laboratory precision; it is consistency. A track record that is 90% right every single day beats a perfect log you abandon by Friday.' },
+      { type: 'h2', text: 'Tips for the best results' },
+      { type: 'list', items: [
+        'Shoot from above with the whole plate in frame',
+        'Good lighting beats fancy cameras',
+        'One dish per photo when possible — or crop before snapping',
+        'Glance at the portion estimate and adjust if the stall was generous',
+      ]},
+    ],
+  },
+  {
+    slug: 'lose-weight-without-giving-up-hawker-food',
+    title: 'How to Lose Weight Without Giving Up Your Favourite Hawker Food',
+    excerpt: 'You don\'t need salad and hunger to get leaner. Malaysians lose weight on nasi lemak economy rice every day — here is the simple math and the 4 habits that actually work.',
+    date: '2026-09-08',
+    readMinutes: 5,
+    tag: 'Weight Loss',
+    emoji: '🎯',
+    image: '/blog/banner-hawker.jpg',
+    blocks: [
+      { type: 'p', text: 'Here is the uncomfortable truth about dieting in Southeast Asia: most plans are designed for people who eat grilled chicken and broccoli. They ask you to abandon char kway teow, skip mamak sessions and survive on misery. That is why they fail. The good news: weight loss is **math, not magic** — and the math works just fine with hawker food.' },
+      { type: 'h2', text: 'The one number that matters' },
+      { type: 'p', text: 'Your body burns a certain number of calories a day (your TDEE — roughly **1,800–2,400 kcal** for most Malaysian adults). Eat less than that, consistently, and you lose weight. It does not matter whether those calories come from quinoa or from nasi lemak. A deficit of **500 kcal a day** equals about **0.5 kg of fat loss per week** — safe, steady, and sustainable.' },
+      { type: 'h2', text: 'The 80% problem: nobody knows what they actually eat' },
+      { type: 'p', text: 'Studies on self-reported food diaries show people typically undercount by **30–50%**. Not because they lie — because they forget the teh tarik, underestimate the rice scoop, and don\'t count the late-night maggi. The first week of honest tracking is almost always a shock. That shock is the most valuable weight-loss tool that exists.' },
+      { type: 'h2', text: 'Habit 1: Track everything for 14 days (no diet changes)' },
+      { type: 'p', text: 'Do not change a single thing. Just record. Snap a photo of every meal — SnapCalo turns each photo into calories and protein in seconds. After two weeks you will see exactly where the surplus lives. For most people it is one or two daily habits, not the whole diet: the second teh tarik, the "small" fried snack at 4pm, the mamak supper that adds 600 kcal after dinner.' },
+      { type: 'h2', text: 'Habit 2: Swap, don\'t sacrifice' },
+      { type: 'list', items: [
+        'Teh tarik kurang manis instead of regular — saves ~80 kcal per glass',
+        'Economy rice: 2 veg + 1 protein, rice separuh — saves ~200 kcal per plate',
+        'Kicap chicken instead of ayam goreng at nasi lemak stalls',
+        'Bihun soup instead of fried noodles on weekdays — saves ~300 kcal',
+        'Air kosong or teh o kosong by default — sugary drinks are the easiest 200 kcal to delete',
+      ]},
+      { type: 'h2', text: 'Habit 3: Follow suku suku separuh (you already know this)' },
+      { type: 'p', text: 'Malaysia\'s own dietary guideline — **a quarter plate carbs, a quarter protein, half vegetables** — is genuinely a weight-loss framework. It works because vegetables fill you up for almost zero calories, naturally shrinking everything else on the plate. You don\'t need a new diet; you need the plate you grew up with, assembled deliberately.' },
+      { type: 'h2', text: 'Habit 4: Weigh weekly, not daily' },
+      { type: 'p', text: 'Daily weight bounces with water, salt and timing — two days of discouraging readings kills more diets than any cheat meal. Weigh once a week, same time, same conditions. Watch the **4-week trend**, not the daily noise. Expect 0.5–1 kg per week early on, slowing as you get leaner.' },
+      { type: 'h2', text: 'The bottom line' },
+      { type: 'p', text: 'You will not find a single food you must give up in this article — because there isn\'t one. You need awareness first (two weeks of tracking), then small swaps on the biggest offenders, then patience. **SnapCalo** was built for exactly this: snap your meal, see the number, adjust tomorrow. That is the whole system — and it beats every fad diet you have ever quit.' },
+    ],
+  },
+]
+
+export function getPost(slug: string): Post | undefined {
+  return posts.find((p) => p.slug === slug)
+}
