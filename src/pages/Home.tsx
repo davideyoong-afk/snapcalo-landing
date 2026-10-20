@@ -817,6 +817,16 @@ function Footer() {
 }
 
 export default function Home() {
+  // vc78 海报策略:QR 指向 snapcalo.me/?dl=1
+  // 安卓扫码 → 直接跳 Google Play;iPhone → 留在落地页(App Store 过审后在此加跳转,海报永不过期)
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search)
+    if (!q.has('dl')) return
+    if (/android/i.test(navigator.userAgent)) {
+      window.location.replace(PLAY_URL)
+    }
+    // iOS: App Store 上架后改成 window.location.replace(APP_STORE_URL)
+  }, [])
   return (
     <div className="min-h-screen bg-[#04090c] text-white">
       <Navbar />
