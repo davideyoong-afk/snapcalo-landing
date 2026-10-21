@@ -75,6 +75,7 @@ function Navbar() {
 
         <div className="hidden md:flex items-center gap-5">
           <a href="#features" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.features}</a>
+          <a href={`/blog?lang=${lang}`} className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.blog}</a>
           <a href={`/partners?lang=${lang}`} className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{partnerLabels[lang]}</a>
 
           <div className="relative" ref={langRef}>
@@ -110,6 +111,7 @@ function Navbar() {
           </a>
         </div>
 
+        <a href="#download" onClick={() => setMenuOpen(false)} className="md:hidden ml-auto mr-3 rounded-full bg-emerald-500 px-4 py-2 text-xs font-bold text-emerald-950 hover:bg-emerald-400">{t.nav.tryFree}</a>
         <button className="md:hidden p-2 text-stone-300" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu" aria-expanded={menuOpen}>
           {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -118,6 +120,7 @@ function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-[#04090c] border-t border-white/[0.06] px-4 py-4 space-y-3">
           <a href="#features" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.features}</a>
+          <a href={`/blog?lang=${lang}`} onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.blog}</a>
           <a href={`/partners?lang=${lang}`} onClick={() => setMenuOpen(false)} className="block text-stone-300">{partnerLabels[lang]}</a>
           <div className="pt-2 border-t border-white/[0.06]">
             <p className="text-xs text-stone-500 mb-2">Language / Bahasa</p>
@@ -133,7 +136,6 @@ function Navbar() {
               ))}
             </div>
           </div>
-          <a href="#download" onClick={() => setMenuOpen(false)} className="block text-emerald-300 font-medium">{t.nav.tryFree}</a>
         </div>
       )}
     </nav>

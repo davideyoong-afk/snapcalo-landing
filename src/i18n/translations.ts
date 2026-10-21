@@ -36,7 +36,7 @@ export const translations: Record<Language, SiteTranslations> = {
       "accuracy": "Accuracy",
       "foods": "Foods",
       "blog": "Blog",
-      "tryFree": "Try For Free"
+      "tryFree": "Try Free"
     },
     "hero": {
       "badge": "AI-Powered for Southeast Asia",
