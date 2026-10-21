@@ -1,0 +1,145 @@
+import type { Language } from './translations'
+
+export const partnerLabels: Record<Language, string> = {
+  en: 'Partners', ms: 'Rakan kongsi', id: 'Mitra', th: 'พันธมิตร', vi: 'Đối tác', zh: '合作伙伴',
+}
+
+const en = {
+  home: 'Home', why: 'Why SnapCalo', how: 'How it works', contact: 'Partner with us',
+  eyebrow: 'SNAPCALO FOR GYMS & COACHES',
+  title: 'Their training has a plan.', accent: 'Give their food one, too.',
+  intro: 'From nasi lemak to the next workout. Help members understand their everyday meals — and build consistency together in your gym’s own SnapCalo group.',
+  explore: 'Let’s partner', seeHow: 'See how it works',
+  facts: ['Local food, understood', 'Six languages', 'Your own group'],
+  visual: 'EVERYDAY FOOD. EVERYDAY PROGRESS.', group: 'Your gym’s group', demo: 'Illustration',
+  board: 'CUMULATIVE CHECK-INS', days: 'days', imageNote: 'App design + illustrative group data',
+  stats: ['One invite code. Your community.', 'Members per group in the upcoming Android update.', 'Languages. More people included.'],
+  availability: '100-member groups are planned for the next Android release; the current version allows 50. iOS availability follows App Store approval and the installed app version.',
+  beyond: 'BEYOND THE GYM FLOOR', benefitsTitle: 'Keep the momentum. Beyond the workout.',
+  benefitsIntro: 'Members don’t need a different food culture. They need a clearer picture of the food they already love.',
+  benefits: [
+    { title: 'Familiar meals. Less friction.', text: 'Photograph everyday meals for calorie and macro estimates, with Southeast Asian dishes at the heart of the experience.' },
+    { title: 'A place for your members.', text: 'Create a group and share its GYM invite code. Give your gym community a shared place to build a routine.' },
+    { title: 'Make consistency visible.', text: 'Logging at least one meal a day adds one check-in day. The board counts cumulative days, which do not have to be consecutive.' },
+  ],
+  start: 'A SIMPLE START', startTitle: 'One group. A shared routine.',
+  rules: 'Sign-in required. Each account belongs to one group at a time; joining a new group leaves the previous one.',
+  steps: [
+    { title: 'Create your SnapCalo group', text: 'Sign in, open Profile → Gym Group, and give your group a name.' },
+    { title: 'Share your GYM invite code', text: 'Put the code at reception or in your member chat so members can join in the app.' },
+    { title: 'Log meals. Follow the board.', text: 'Encourage a daily meal log and follow cumulative check-in days together.' },
+  ],
+  grow: 'GROW WITH US', ctaTitle: 'The next good habit starts with one meal.',
+  ctaText: 'Run a gym, a studio, or a training community? Tell us about your gym, city, and how you want to support your members.',
+  email: 'Email us about a partnership', emailNote: 'Opens your email app. Review your message before sending.',
+  privacy: 'Privacy', footer: 'Southeast Asian food. Everyday progress.',
+  foodAlt: 'Southeast Asian food and community', screenAlt: 'SnapCalo Today screen design',
+}
+type Copy = typeof en
+
+export const partnerCopy: Record<Language, Copy> = {
+  en,
+  zh: {
+    home: '首页', why: '合作价值', how: '如何合作', contact: '成为合作伙伴',
+    eyebrow: 'SNAPCALO · 健身房合作计划', title: '训练之后，', accent: '让饮食也能跟上进度。',
+    intro: '从一盘椰浆饭，到一次健身打卡。帮助会员用 SnapCalo 记录日常饮食，在你的专属群组里一起坚持。',
+    explore: '聊聊合作', seeHow: '看看如何运作', facts: ['东南亚饮食', '六种语言', '专属健身群组'],
+    visual: '日常饮食，也是训练的一部分。', group: '你的健身房群组', demo: '示意', board: '累计打卡榜', days: '天', imageNote: 'App 界面设计稿与群组示意数据',
+    stats: ['一个邀请码，连接你的会员。', '新版 Android 计划支持的群组人数。', '六种语言，让更多会员参与。'],
+    availability: '100 人群组将随下一版 Android 发布，当前版本上限为 50 人。iOS 功能以 App Store 审核结果与安装版本为准。',
+    beyond: '训练场之外', benefitsTitle: '把训练的动力，带到餐桌上。', benefitsIntro: '会员不用换一种饮食文化。先了解每天在吃什么，再慢慢建立习惯。',
+    benefits: [
+      { title: '熟悉的食物，更容易开始', text: '拍下日常餐食，查看热量和宏量营养估算。东南亚食物，是 SnapCalo 的核心。' },
+      { title: '一个属于你的会员群组', text: '创建专属群组，把 GYM 邀请码分享给会员，让大家一起建立记录饮食的习惯。' },
+      { title: '看见坚持，多一点动力', text: '每天记录至少一餐，累计增加一个打卡日。榜单统计累计天数，不要求连续。' },
+    ],
+    start: '如何开始', startTitle: '从一个群组开始，一起坚持。', rules: '需先登录。每个账号同时只能加入一个群组；加入新群会退出旧群。',
+    steps: [
+      { title: '在 SnapCalo 创建群组', text: '登录后进入个人页 → 健身群组，设置群组名称。' },
+      { title: '分享你的 GYM 邀请码', text: '把邀请码放在前台或会员群，让会员在 App 内加入。' },
+      { title: '一起记录，看看累计打卡榜', text: '鼓励每天记录一餐，回到群组查看大家累计的打卡天数。' },
+    ],
+    grow: '一起成长', ctaTitle: '让下一次改变，从今天的一餐开始。', ctaText: '经营健身房、工作室，或带领训练社群？告诉我们你的健身房、所在城市，以及你希望怎样帮助会员。',
+    email: '发送合作咨询邮件', emailNote: '将打开你的邮件应用，发送前可先检查内容。', privacy: '隐私政策', footer: '了解东南亚饮食，每天进步一点。', foodAlt: '东南亚饮食与社群', screenAlt: 'SnapCalo 今日页界面设计稿',
+  },
+  ms: {
+    home: 'Utama', why: 'Mengapa SnapCalo', how: 'Cara bermula', contact: 'Jadi rakan kongsi', eyebrow: 'SNAPCALO UNTUK GIM & JURULATIH',
+    title: 'Latihan mereka ada pelan.', accent: 'Pemakanan pun begitu.', intro: 'Daripada nasi lemak ke sesi latihan seterusnya. Bantu ahli memahami makanan harian dan membina rutin bersama dalam kumpulan SnapCalo gim anda.',
+    explore: 'Bincang kerjasama', seeHow: 'Lihat caranya', facts: ['Makanan tempatan', 'Enam bahasa', 'Kumpulan sendiri'], visual: 'MAKANAN HARIAN. KEMAJUAN HARIAN.', group: 'Kumpulan gim anda', demo: 'Ilustrasi', board: 'JUMLAH HARI DAFTAR MASUK', days: 'hari', imageNote: 'Reka bentuk aplikasi + data kumpulan contoh',
+    stats: ['Satu kod jemputan untuk komuniti anda.', 'Ahli setiap kumpulan dalam kemas kini Android akan datang.', 'Bahasa untuk lebih ramai ahli.'],
+    availability: 'Kumpulan 100 ahli dirancang untuk keluaran Android seterusnya; versi semasa membenarkan 50 ahli. Ketersediaan iOS bergantung pada kelulusan App Store dan versi aplikasi.',
+    beyond: 'DI LUAR GIM', benefitsTitle: 'Teruskan semangat selepas latihan.', benefitsIntro: 'Ahli tidak perlu menukar budaya makanan. Mereka perlukan gambaran lebih jelas tentang makanan yang digemari.',
+    benefits: [
+      { title: 'Makanan biasa. Lebih mudah bermula.', text: 'Ambil gambar hidangan harian untuk anggaran kalori dan makro, dengan tumpuan pada makanan Asia Tenggara.' },
+      { title: 'Ruang untuk ahli anda.', text: 'Cipta kumpulan dan kongsi kod GYM untuk membina rutin bersama komuniti gim anda.' },
+      { title: 'Jadikan usaha lebih jelas.', text: 'Catat sekurang-kurangnya satu hidangan sehari untuk menambah satu hari. Papan mengira jumlah hari, bukan hari berturut-turut.' },
+    ],
+    start: 'MUDAH BERMULA', startTitle: 'Satu kumpulan. Rutin bersama.', rules: 'Log masuk diperlukan. Setiap akaun hanya boleh berada dalam satu kumpulan; menyertai kumpulan baharu akan keluar daripada kumpulan lama.',
+    steps: [
+      { title: 'Cipta kumpulan SnapCalo', text: 'Log masuk, buka Profil → Kumpulan Gim dan namakan kumpulan.' },
+      { title: 'Kongsi kod jemputan GYM', text: 'Letakkan kod di kaunter atau sembang ahli supaya mereka boleh menyertai dalam aplikasi.' },
+      { title: 'Catat makanan. Ikuti papan.', text: 'Galakkan catatan harian dan lihat jumlah hari daftar masuk bersama.' },
+    ],
+    grow: 'BERKEMBANG BERSAMA', ctaTitle: 'Tabiat baik bermula dengan satu hidangan.', ctaText: 'Mengurus gim, studio atau komuniti latihan? Ceritakan tentang gim, bandar dan cara anda ingin membantu ahli.', email: 'E-mel tentang kerjasama', emailNote: 'Membuka aplikasi e-mel anda. Semak mesej sebelum menghantar.', privacy: 'Privasi', footer: 'Makanan Asia Tenggara. Kemajuan harian.', foodAlt: 'Makanan dan komuniti Asia Tenggara', screenAlt: 'Reka bentuk skrin Today SnapCalo',
+  },
+  id: {
+    home: 'Beranda', why: 'Mengapa SnapCalo', how: 'Cara kerja', contact: 'Jadi mitra', eyebrow: 'SNAPCALO UNTUK GYM & PELATIH',
+    title: 'Latihan mereka punya rencana.', accent: 'Makanan juga perlu.', intro: 'Dari nasi lemak ke latihan berikutnya. Bantu anggota memahami makanan sehari-hari dan membangun kebiasaan bersama dalam grup SnapCalo gym Anda.',
+    explore: 'Mari bermitra', seeHow: 'Lihat cara kerjanya', facts: ['Makanan lokal', 'Enam bahasa', 'Grup sendiri'], visual: 'MAKANAN SEHARI-HARI. KEMAJUAN SETIAP HARI.', group: 'Grup gym Anda', demo: 'Ilustrasi', board: 'AKUMULASI HARI CHECK-IN', days: 'hari', imageNote: 'Desain aplikasi + data grup ilustrasi',
+    stats: ['Satu kode undangan untuk komunitas Anda.', 'Anggota per grup di pembaruan Android mendatang.', 'Bahasa untuk lebih banyak anggota.'],
+    availability: 'Grup 100 anggota direncanakan untuk rilis Android berikutnya; versi saat ini mendukung 50 anggota. Ketersediaan iOS mengikuti persetujuan App Store dan versi aplikasi.',
+    beyond: 'DI LUAR GYM', benefitsTitle: 'Jaga semangat setelah latihan.', benefitsIntro: 'Anggota tidak perlu mengganti budaya makan. Mereka perlu memahami makanan yang sudah disukai.',
+    benefits: [
+      { title: 'Makanan familier. Lebih mudah mulai.', text: 'Foto makanan sehari-hari untuk estimasi kalori dan makro, dengan fokus pada hidangan Asia Tenggara.' },
+      { title: 'Tempat untuk anggota Anda.', text: 'Buat grup dan bagikan kode GYM agar komunitas gym membangun rutinitas bersama.' },
+      { title: 'Lihat konsistensi bersama.', text: 'Catat minimal satu makanan sehari untuk menambah satu hari check-in. Papan menghitung akumulasi hari, tidak harus berturut-turut.' },
+    ],
+    start: 'MUDAH DIMULAI', startTitle: 'Satu grup. Rutinitas bersama.', rules: 'Harus masuk akun. Setiap akun hanya dapat berada dalam satu grup; bergabung ke grup baru akan keluar dari grup lama.',
+    steps: [
+      { title: 'Buat grup SnapCalo', text: 'Masuk, buka Profil → Grup Gym dan beri nama grup Anda.' },
+      { title: 'Bagikan kode undangan GYM', text: 'Letakkan kode di resepsionis atau obrolan anggota agar mereka dapat bergabung di aplikasi.' },
+      { title: 'Catat makanan. Ikuti papan.', text: 'Ajak anggota mencatat setiap hari dan lihat akumulasi hari check-in bersama.' },
+    ],
+    grow: 'TUMBUH BERSAMA', ctaTitle: 'Kebiasaan baik dimulai dari satu makanan.', ctaText: 'Mengelola gym, studio, atau komunitas latihan? Ceritakan tentang gym, kota, dan cara Anda ingin membantu anggota.', email: 'Kirim email kemitraan', emailNote: 'Membuka aplikasi email Anda. Periksa pesan sebelum mengirim.', privacy: 'Privasi', footer: 'Makanan Asia Tenggara. Kemajuan setiap hari.', foodAlt: 'Makanan dan komunitas Asia Tenggara', screenAlt: 'Desain layar Today SnapCalo',
+  },
+  th: {
+    home: 'หน้าแรก', why: 'ทำไมต้อง SnapCalo', how: 'วิธีเริ่มต้น', contact: 'ร่วมเป็นพันธมิตร', eyebrow: 'SNAPCALO สำหรับยิมและโค้ช',
+    title: 'การฝึกมีแผนแล้ว', accent: 'ให้การกินมีแผนด้วย', intro: 'จากนาซีเลอมักสู่การฝึกครั้งต่อไป ช่วยให้สมาชิกเข้าใจอาหารประจำวัน และสร้างนิสัยร่วมกันในกลุ่ม SnapCalo ของยิมคุณ',
+    explore: 'พูดคุยเรื่องความร่วมมือ', seeHow: 'ดูวิธีใช้งาน', facts: ['เข้าใจอาหารท้องถิ่น', 'หกภาษา', 'กลุ่มของคุณเอง'], visual: 'อาหารทุกวัน ความก้าวหน้าทุกวัน', group: 'กลุ่มยิมของคุณ', demo: 'ภาพตัวอย่าง', board: 'วันเช็กอินสะสม', days: 'วัน', imageNote: 'ภาพออกแบบแอปและข้อมูลกลุ่มตัวอย่าง',
+    stats: ['รหัสเชิญเดียวสำหรับชุมชนของคุณ', 'สมาชิกต่อกลุ่มในการอัปเดต Android ครั้งถัดไป', 'ภาษาเพื่อสมาชิกที่หลากหลาย'],
+    availability: 'วางแผนรองรับ 100 คนต่อกลุ่มใน Android รุ่นถัดไป รุ่นปัจจุบันรองรับ 50 คน ส่วน iOS ขึ้นอยู่กับการอนุมัติ App Store และเวอร์ชันแอป',
+    beyond: 'นอกพื้นที่ยิม', benefitsTitle: 'รักษาแรงผลักดันหลังการฝึก', benefitsIntro: 'สมาชิกไม่ต้องเปลี่ยนวัฒนธรรมการกิน เพียงเข้าใจอาหารที่ชอบให้ชัดเจนขึ้น',
+    benefits: [
+      { title: 'อาหารคุ้นเคย เริ่มต้นง่าย', text: 'ถ่ายภาพอาหารเพื่อประมาณแคลอรีและสารอาหารหลัก โดยเน้นอาหารเอเชียตะวันออกเฉียงใต้' },
+      { title: 'พื้นที่สำหรับสมาชิกของคุณ', text: 'สร้างกลุ่มและแชร์รหัส GYM เพื่อสร้างกิจวัตรร่วมกันในชุมชนยิม' },
+      { title: 'เห็นความสม่ำเสมอร่วมกัน', text: 'บันทึกอย่างน้อยหนึ่งมื้อต่อวันเพื่อเพิ่มหนึ่งวันเช็กอิน ตารางนับวันสะสม ไม่จำเป็นต้องติดต่อกัน' },
+    ],
+    start: 'เริ่มต้นง่าย', startTitle: 'หนึ่งกลุ่ม กิจวัตรร่วมกัน', rules: 'ต้องเข้าสู่ระบบ แต่ละบัญชีอยู่ได้ครั้งละหนึ่งกลุ่ม การเข้ากลุ่มใหม่จะออกจากกลุ่มเดิม',
+    steps: [
+      { title: 'สร้างกลุ่ม SnapCalo', text: 'เข้าสู่ระบบ เปิดโปรไฟล์ → กลุ่มยิม แล้วตั้งชื่อกลุ่ม' },
+      { title: 'แชร์รหัสเชิญ GYM', text: 'วางรหัสที่เคาน์เตอร์หรือในแชตสมาชิก เพื่อให้เข้าร่วมผ่านแอป' },
+      { title: 'บันทึกมื้ออาหาร ดูตาราง', text: 'ชวนบันทึกอาหารทุกวันและดูจำนวนวันเช็กอินสะสมร่วมกัน' },
+    ],
+    grow: 'เติบโตไปด้วยกัน', ctaTitle: 'นิสัยที่ดีเริ่มจากอาหารหนึ่งมื้อ', ctaText: 'ดูแลยิม สตูดิโอ หรือชุมชนฝึกซ้อมอยู่หรือไม่ บอกเราเกี่ยวกับยิม เมือง และวิธีที่อยากช่วยสมาชิก', email: 'อีเมลสอบถามความร่วมมือ', emailNote: 'เปิดแอปอีเมลของคุณ โปรดตรวจสอบข้อความก่อนส่ง', privacy: 'ความเป็นส่วนตัว', footer: 'อาหารเอเชียตะวันออกเฉียงใต้ ความก้าวหน้าทุกวัน', foodAlt: 'อาหารและชุมชนเอเชียตะวันออกเฉียงใต้', screenAlt: 'ภาพออกแบบหน้าวันนี้ของ SnapCalo',
+  },
+  vi: {
+    home: 'Trang chủ', why: 'Vì sao chọn SnapCalo', how: 'Cách bắt đầu', contact: 'Trở thành đối tác', eyebrow: 'SNAPCALO CHO PHÒNG TẬP & HUẤN LUYỆN VIÊN',
+    title: 'Tập luyện đã có kế hoạch.', accent: 'Ăn uống cũng nên có.', intro: 'Từ nasi lemak đến buổi tập tiếp theo. Giúp hội viên hiểu bữa ăn hằng ngày và xây dựng thói quen cùng nhau trong nhóm SnapCalo của phòng tập.',
+    explore: 'Trao đổi hợp tác', seeHow: 'Xem cách hoạt động', facts: ['Hiểu món ăn địa phương', 'Sáu ngôn ngữ', 'Nhóm riêng của bạn'], visual: 'BỮA ĂN MỖI NGÀY. TIẾN BỘ MỖI NGÀY.', group: 'Nhóm phòng tập của bạn', demo: 'Minh họa', board: 'SỐ NGÀY ĐIỂM DANH TÍCH LŨY', days: 'ngày', imageNote: 'Thiết kế ứng dụng + dữ liệu nhóm minh họa',
+    stats: ['Một mã mời cho cộng đồng của bạn.', 'Hội viên mỗi nhóm trong bản cập nhật Android sắp tới.', 'Ngôn ngữ để nhiều người cùng tham gia.'],
+    availability: 'Nhóm 100 người dự kiến có trong bản Android tiếp theo; bản hiện tại hỗ trợ 50 người. Tính năng iOS phụ thuộc phê duyệt App Store và phiên bản ứng dụng.',
+    beyond: 'BÊN NGOÀI PHÒNG TẬP', benefitsTitle: 'Giữ động lực sau buổi tập.', benefitsIntro: 'Hội viên không cần thay đổi văn hóa ăn uống. Họ cần hiểu rõ hơn những món mình yêu thích.',
+    benefits: [
+      { title: 'Món quen thuộc. Dễ bắt đầu.', text: 'Chụp bữa ăn hằng ngày để ước tính calo và chất dinh dưỡng đa lượng, tập trung vào món Đông Nam Á.' },
+      { title: 'Không gian cho hội viên.', text: 'Tạo nhóm và chia sẻ mã GYM để cộng đồng phòng tập cùng xây dựng thói quen.' },
+      { title: 'Nhìn thấy sự kiên trì.', text: 'Ghi ít nhất một bữa mỗi ngày để cộng một ngày điểm danh. Bảng tính tổng số ngày, không cần liên tiếp.' },
+    ],
+    start: 'BẮT ĐẦU ĐƠN GIẢN', startTitle: 'Một nhóm. Một thói quen chung.', rules: 'Cần đăng nhập. Mỗi tài khoản chỉ thuộc một nhóm tại một thời điểm; vào nhóm mới sẽ rời nhóm cũ.',
+    steps: [
+      { title: 'Tạo nhóm SnapCalo', text: 'Đăng nhập, mở Hồ sơ → Nhóm phòng tập và đặt tên nhóm.' },
+      { title: 'Chia sẻ mã mời GYM', text: 'Đặt mã tại quầy lễ tân hoặc trong nhóm chat để hội viên tham gia qua ứng dụng.' },
+      { title: 'Ghi bữa ăn. Xem bảng.', text: 'Khuyến khích ghi bữa ăn mỗi ngày và cùng xem số ngày điểm danh tích lũy.' },
+    ],
+    grow: 'CÙNG PHÁT TRIỂN', ctaTitle: 'Thói quen tốt bắt đầu từ một bữa ăn.', ctaText: 'Bạn điều hành phòng tập, studio hay cộng đồng tập luyện? Hãy cho chúng tôi biết phòng tập, thành phố và cách bạn muốn hỗ trợ hội viên.', email: 'Gửi email về hợp tác', emailNote: 'Mở ứng dụng email của bạn. Kiểm tra nội dung trước khi gửi.', privacy: 'Quyền riêng tư', footer: 'Món ăn Đông Nam Á. Tiến bộ mỗi ngày.', foodAlt: 'Ẩm thực và cộng đồng Đông Nam Á', screenAlt: 'Thiết kế màn hình Hôm nay của SnapCalo',
+  },
+}

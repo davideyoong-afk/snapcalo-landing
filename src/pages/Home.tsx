@@ -26,6 +26,7 @@ import {
 import { useI18n } from '../i18n/I18nContext'
 import { languages, type Language } from '../i18n/translations'
 import qrPlay from '../assets/qr-play.svg'
+import { partnerLabels } from '../i18n/partners'
 
 const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.snapcalo.mobile'
 
@@ -72,13 +73,14 @@ function Navbar() {
           <img src="/logo-dark.png?v=4" alt="SnapCalo" className="h-16 w-auto rounded-lg" />
         </div>
 
-        <div className="hidden md:flex items-center gap-7">
+        <div className="hidden xl:flex items-center gap-5">
           <a href="#features" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.features}</a>
           <a href="#how-it-works" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.howItWorks}</a>
           <a href="#accuracy" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.accuracy}</a>
           <a href="#foods" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.foods}</a>
           <a href="/blog" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.blog}</a>
           <a href="/faq" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">FAQ</a>
+          <a href={`/partners?lang=${lang}`} className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{partnerLabels[lang]}</a>
 
           <div className="relative" ref={langRef}>
             <button
@@ -111,19 +113,20 @@ function Navbar() {
           </a>
         </div>
 
-        <button className="md:hidden p-2 text-stone-300" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="xl:hidden p-2 text-stone-300" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu" aria-expanded={menuOpen}>
           {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-[#04090c] border-t border-white/[0.06] px-4 py-4 space-y-3">
+        <div className="xl:hidden bg-[#04090c] border-t border-white/[0.06] px-4 py-4 space-y-3">
           <a href="#features" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.features}</a>
           <a href="#how-it-works" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.howItWorks}</a>
           <a href="#accuracy" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.accuracy}</a>
           <a href="#foods" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.foods}</a>
           <a href="/blog" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.blog}</a>
           <a href="/faq" onClick={() => setMenuOpen(false)} className="block text-stone-300">FAQ</a>
+          <a href={`/partners?lang=${lang}`} onClick={() => setMenuOpen(false)} className="block text-stone-300">{partnerLabels[lang]}</a>
           <div className="pt-2 border-t border-white/[0.06]">
             <p className="text-xs text-stone-500 mb-2">Language / Bahasa</p>
             <div className="grid grid-cols-3 gap-2">
@@ -770,7 +773,7 @@ function CTA() {
 }
 
 function Footer() {
-  const { t } = useI18n()
+  const { lang, t } = useI18n()
 
   return (
     <footer className="bg-black text-stone-500 py-12 border-t border-white/[0.06]">
@@ -796,6 +799,7 @@ function Footer() {
               <li><a href="#" className="hover:text-emerald-400 transition">About</a></li>
               <li><a href="/blog" className="hover:text-emerald-400 transition">Blog</a></li>
               <li><a href="/faq" className="hover:text-emerald-400 transition">FAQ</a></li>
+              <li><a href={`/partners?lang=${lang}`} className="hover:text-emerald-400 transition">{partnerLabels[lang]}</a></li>
               <li><a href="https://www.tiktok.com/@snapcalo.me" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition">TikTok @snapcalo.me</a></li>
               <li><a href="https://www.facebook.com/profile.php?id=61594966703226" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition">Facebook Calo Snap</a></li>
             </ul>
@@ -817,15 +821,11 @@ function Footer() {
 }
 
 export default function Home() {
-  // vc78 海报策略:QR 指向 snapcalo.me/?dl=1
-  // 安卓扫码 → 直接跳 Google Play;iPhone → 留在落地页(App Store 过审后在此加跳转,海报永不过期)
+  // Keep the production QR flow: Android ?dl=1 opens Google Play; iOS stays here.
   useEffect(() => {
     const q = new URLSearchParams(window.location.search)
     if (!q.has('dl')) return
-    if (/android/i.test(navigator.userAgent)) {
-      window.location.replace(PLAY_URL)
-    }
-    // iOS: App Store 上架后改成 window.location.replace(APP_STORE_URL)
+    if (/android/i.test(navigator.userAgent)) window.location.replace(PLAY_URL)
   }, [])
   return (
     <div className="min-h-screen bg-[#04090c] text-white">
