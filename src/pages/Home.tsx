@@ -73,18 +73,15 @@ function Navbar() {
           <img src="/logo-dark.png?v=4" alt="SnapCalo" className="h-16 w-auto rounded-lg" />
         </div>
 
-        <div className="hidden xl:flex items-center gap-5">
+        <div className="hidden md:flex items-center gap-5">
           <a href="#features" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.features}</a>
-          <a href="#how-it-works" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.howItWorks}</a>
-          <a href="#accuracy" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.accuracy}</a>
-          <a href="#foods" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.foods}</a>
-          <a href="/blog" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{t.nav.blog}</a>
-          <a href="/faq" className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">FAQ</a>
           <a href={`/partners?lang=${lang}`} className="nav-link text-sm font-medium text-stone-400 hover:text-white transition">{partnerLabels[lang]}</a>
 
           <div className="relative" ref={langRef}>
             <button
               onClick={() => setLangOpen(!langOpen)}
+              aria-label="Language / Bahasa / 语言"
+              aria-expanded={langOpen}
               className="flex items-center gap-1.5 text-sm text-stone-400 hover:text-emerald-300 transition px-2 py-1 rounded-lg hover:bg-white/5"
             >
               <Languages className="w-4 h-4" />
@@ -113,19 +110,14 @@ function Navbar() {
           </a>
         </div>
 
-        <button className="xl:hidden p-2 text-stone-300" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu" aria-expanded={menuOpen}>
+        <button className="md:hidden p-2 text-stone-300" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu" aria-expanded={menuOpen}>
           {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {menuOpen && (
-        <div className="xl:hidden bg-[#04090c] border-t border-white/[0.06] px-4 py-4 space-y-3">
+        <div className="md:hidden bg-[#04090c] border-t border-white/[0.06] px-4 py-4 space-y-3">
           <a href="#features" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.features}</a>
-          <a href="#how-it-works" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.howItWorks}</a>
-          <a href="#accuracy" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.accuracy}</a>
-          <a href="#foods" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.foods}</a>
-          <a href="/blog" onClick={() => setMenuOpen(false)} className="block text-stone-300">{t.nav.blog}</a>
-          <a href="/faq" onClick={() => setMenuOpen(false)} className="block text-stone-300">FAQ</a>
           <a href={`/partners?lang=${lang}`} onClick={() => setMenuOpen(false)} className="block text-stone-300">{partnerLabels[lang]}</a>
           <div className="pt-2 border-t border-white/[0.06]">
             <p className="text-xs text-stone-500 mb-2">Language / Bahasa</p>
@@ -790,6 +782,9 @@ function Footer() {
             <h4 className="font-semibold text-white mb-4">{t.footer.product}</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#features" className="hover:text-emerald-400 transition">{t.nav.features}</a></li>
+              <li><a href="#how-it-works" className="hover:text-emerald-400 transition">{t.nav.howItWorks}</a></li>
+              <li><a href="#accuracy" className="hover:text-emerald-400 transition">{t.nav.accuracy}</a></li>
+              <li><a href="#foods" className="hover:text-emerald-400 transition">{t.nav.foods}</a></li>
               <li><a href="#download" className="hover:text-emerald-400 transition">{t.nav.tryFree}</a></li>
             </ul>
           </div>
