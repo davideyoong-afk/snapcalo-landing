@@ -8,12 +8,13 @@ export default function CanonicalLink() {
   const { pathname } = useLocation()
   const { lang } = useI18n()
   useEffect(() => {
-    const link = document.createElement('link')
+    const existing = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+    const link = existing ?? document.createElement('link')
     link.rel = 'canonical'
     link.href = canonicalUrl(pathname, lang)
-    document.head.appendChild(link)
+    if (!existing) document.head.appendChild(link)
     document.documentElement.lang = lang
-    return () => { link.remove() }
+    return () => { if (!existing) link.remove() }
   }, [pathname, lang])
   return null
 }

@@ -29,6 +29,7 @@ function detectDeviceLang(): Language {
 
 /** 首次打开:① 网址 ?lang=xx ② 上次手动选过的 ③ 设备系统语言 */
 function initialLang(): Language {
+  if (typeof window === 'undefined') return 'en'
   const fromUrl = new URLSearchParams(window.location.search).get('lang') as Language | null
   if (fromUrl && SUPPORTED.includes(fromUrl)) return fromUrl
   const saved = localStorage.getItem('snapcalo-lang') as Language | null

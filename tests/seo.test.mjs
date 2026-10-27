@@ -39,3 +39,21 @@ test('tracking and fragments cannot leak into canonical URLs', () => {
   assert.equal(canonicalUrl(page.pathname, 'zh'), 'https://www.snapcalo.me/blog/nasi-lemak-calories?lang=zh')
   assert.ok(!html.includes('rel="canonical"')) // shared SPA HTML must not point every route home
 })
+
+
+test('all fifteen deployed routes return nonempty pre-rendered content and their own canonical', () => {
+  const config = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url), 'utf8'))
+  for (const path of paths) {
+    const rule = config.rewrites.find(rule => rule.source === path)
+    assert.ok(rule?.destination.startsWith('/prerender/'), path)
+    const content = readFileSync(new URL(`../dist${rule.destination}`, import.meta.url), 'utf8')
+    assert.ok(/<h[1-3]\b/.test(content), path)
+    assert.ok(!content.includes('<div id="root"></div>'), path)
+    assert.ok(content.includes(`rel="canonical" href="https://www.snapcalo.me${path}"`), path)
+    assert.equal([...content.matchAll(/rel="canonical"/g)].length, 1, path)
+    if (path.startsWith('/blog/')) {
+      assert.ok(content.includes('<article'), path)
+      assert.ok(content.includes('name="description"'), path)
+    }
+  }
+})
