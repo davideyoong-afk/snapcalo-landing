@@ -37,7 +37,7 @@ test('six languages preserve content variants instead of collapsing translations
 test('tracking and fragments cannot leak into canonical URLs', () => {
   const page = new URL('https://www.snapcalo.me/blog/nasi-lemak-calories?utm_source=tiktok&lang=zh#download')
   assert.equal(canonicalUrl(page.pathname, 'zh'), 'https://www.snapcalo.me/blog/nasi-lemak-calories?lang=zh')
-  assert.ok(!html.includes('rel="canonical"')) // shared SPA HTML must not point every route home
+  assert.ok(html.includes('rel="canonical" href="https://www.snapcalo.me/"'))
 })
 
 

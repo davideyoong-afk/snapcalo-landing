@@ -27,5 +27,7 @@ for (const url of urls) {
   const file = resolve(root, `dist${route.destination}`)
   await mkdir(dirname(file), { recursive: true })
   await writeFile(file, html)
+  // Vercel serves an existing index.html before evaluating a root rewrite.
+  if (url.pathname === '/') await writeFile(resolve(root, 'dist/index.html'), html)
 }
 console.log(`Pre-rendered ${urls.length} public routes with content and canonical URLs.`)
