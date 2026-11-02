@@ -281,7 +281,7 @@ export const translations: Record<Language, SiteTranslations> = {
       "cta": "Get My Invite Code"
     },
     "launch": {
-      "title": "🚀 Oct 10 Launch Exclusive",
+      "title": "🚀 Launch offer — starts November 1, 2026",
       "steps": [
         "Like + share our launch video on TikTok",
         "Comment \"I want it\" under the video",
@@ -550,7 +550,7 @@ export const translations: Record<Language, SiteTranslations> = {
       "cta": "Dapatkan Kod Jemputan Saya"
     },
     "launch": {
-      "title": "🚀 Eksklusif Pelancaran 10 Oktober",
+      "title": "🚀 Tawaran pelancaran — bermula 1 November 2026",
       "steps": [
         "Like + kongsi video pelancaran kami di TikTok",
         "Komen \"Nak\" di bawah video",
@@ -819,7 +819,7 @@ export const translations: Record<Language, SiteTranslations> = {
       "cta": "Dapatkan Kode Undangan Saya"
     },
     "launch": {
-      "title": "🚀 Eksklusif Peluncuran 10 Oktober",
+      "title": "🚀 Promo peluncuran — mulai 1 November 2026",
       "steps": [
         "Like + bagikan video peluncuran kami di TikTok",
         "Komentar \"Mau\" di bawah video",
@@ -1088,7 +1088,7 @@ export const translations: Record<Language, SiteTranslations> = {
       "cta": "Lấy mã mời của tôi"
     },
     "launch": {
-      "title": "🚀 Ưu đãi ra mắt 10 tháng 10",
+      "title": "🚀 Ưu đãi ra mắt — bắt đầu ngày 1 tháng 11 năm 2026",
       "steps": [
         "Like + chia sẻ video ra mắt trên TikTok",
         "Bình luận \"Muốn\" dưới video",
@@ -1357,7 +1357,7 @@ export const translations: Record<Language, SiteTranslations> = {
       "cta": "รับรหัสเชิญของฉัน"
     },
     "launch": {
-      "title": "🚀 สิทธิ์พิเศษเปิดตัว 10 ตุลาคม",
+      "title": "🚀 โปรโมชันเปิดตัว — เริ่ม 1 พฤศจิกายน 2026",
       "steps": [
         "กดไลก์ + แชร์วิดีโอเปิดตัวของเราใน TikTok",
         "คอมเมนต์ \"อยากได้\" ใต้วิดีโอ",
@@ -1626,7 +1626,7 @@ export const translations: Record<Language, SiteTranslations> = {
       "cta": "获取我的邀请码"
     },
     "launch": {
-      "title": "🚀 10月10日 上线专属福利",
+      "title": "🚀 上线专属福利 · 2026年11月1日起",
       "steps": [
         "到 TikTok 点赞 + 分享我们的发布视频",
         "评论区留言「想要」",
